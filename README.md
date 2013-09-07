@@ -30,3 +30,13 @@ Generating the PDF file from the LaTeX file
 -------------------------------------------
 
     pdflatex 0-tools.tex
+
+=================================================================    
+
+For Window User
+---------------------------------------------------------
+Install MiKTeX
+http://miktex.org/2.9/setup
+
+Install Texmaker
+http://www.xm1math.net/texmaker/
