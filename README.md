@@ -21,6 +21,10 @@ On an Arch-based GNU/Linux system (i.e., Parabola GNU/Linux):
 
     sudo pacman -S texlive-core
 
+On an RPM-based GNU/Linux system (i.e., BLAG Linux and GNU):
+
+    sudo yum install texlive texlive-latex texlive-beamer 
+
 
 Generating the PDF file from the LaTeX file
 -------------------------------------------
