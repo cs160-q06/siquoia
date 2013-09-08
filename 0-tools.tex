@@ -7,6 +7,7 @@
 \usecolortheme{beaver}
 \useoutertheme{infolines}
 \useinnertheme{circles}
+\usepackage{comment}
 
 \setbeamertemplate{footline} { 
   \leavevmode
@@ -46,25 +47,116 @@
   \end{itemize}
 }
 
+%Introduction
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Software Configuration Management (SCM)}
   \framesubtitle{Tracking and controlling changes in software}
   \begin{center}
-    {\Huge Git} \\[1em]
-    \pause
-    License: GNU General Public License (GPL) v2\\[2em]
+  	{\Huge Language: Java} \\[1em]
+  	\pause
+    {\Huge Tools} \\[2em]
     \pause
     \begin{itemize}
-      \item Command line git client can be used.
+      \item Software Configuration Management: {\bf EGit}
         \pause
-      \item Graphical git client can be used.
+      \item Software Hosting Facility: {\bf Github}
         \pause
-      \item Can be integrated into IDEs like Eclipse, using a plug-in.
+        \item Standalone Bug Tracker: {\bf Codebeamer}
+        \pause
+        \item Editor and IDE: {\bf Eclipse}
+        \pause
+        \item  Project Management: {\bf OpenProject}
+
+    \end{itemize}
+   
+  \end{center}
+}
+
+%Egit
+\frame{
+  \transdissolve[duration=0.25]
+  \frametitle{Software Configuration Management (SCM)}
+  \framesubtitle{Tracking and controlling changes in software}
+  \begin{center}
+    {\Huge EGit} \\[1em]
+    \pause
+    "The EGit project is implementing Eclipse tooling on top of a Java implementation of Git."\\[2em]
+    \pause
+    \begin{itemize}
+      \item free, open source, designed for branching and merging
+        \pause
+      \item decentralized model (everyone has own copy of repository, which can later be merged)
+        \pause
+      \item Can be integrated into Eclipse, using a plug-in.
     \end{itemize}
   \end{center}
 }
 
+%Egit compare
+\frame{
+  \transdissolve[duration=0.25]
+  \frametitle{Software Configuration Management (SCM)}
+  \framesubtitle{Tracking and controlling changes in software}
+  \begin{center}
+    {\Huge EGit compare to Others} \\[1em]
+    \pause
+        
+    \begin{flushleft}
+    {\Large Subversion}
+	\end{flushleft}
+	\pause
+    \begin{itemize}
+      \item free, open source, actively developed
+        \pause
+      \item easier to use than Git (more tools available for non-technical users, error messages are easier to understand)
+      \pause
+      \item centralized model (everyone has a working copy and changes are submitted to central repository)
+      \pause
+    \end{itemize}
+    
+    \begin{flushleft}
+    {\Large LibreSource}
+	\end{flushleft}
+	\pause
+    \begin{itemize}
+      \item free, open source, maintained and new features under development
+       
+    \end{itemize}
+  \end{center}
+}
+
+%Egit install
+\frame{
+  \transdissolve[duration=0.25]
+  \frametitle{Software Configuration Management (SCM)}
+  \framesubtitle{Tracking and controlling changes in software}
+  \begin{center}
+    {\Huge EGit Installation} \\[1em]
+    \pause
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/egit/egit1.PNG}
+  \caption{Instruction to install Egit into Eclispe}
+\end{figure}
+	
+  \end{center}
+}
+
+\frame{
+  \transdissolve[duration=0.25]
+  \frametitle{Software Configuration Management (SCM)}
+  \framesubtitle{Tracking and controlling changes in software}
+  \begin{center}
+    {\Huge EGit Installation} \\[1em]
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/egit/egit2.PNG}
+  \caption{Instruction to install Egit into Eclispe}
+\end{figure}
+	
+  \end{center}
+}
+
+%Github
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Software hosting facilities}
@@ -75,26 +167,58 @@
   \end{center}
 }
 
+%Codebeamer
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
   \begin{center}
-    {\Huge Bugzilla} \\[1em]
+    {\Huge CodeBeamer} \\[1em]
     \pause
-    License: Mozilla Public License (MPL)
+    "CodeBeamer is a web based Collaborative Application Lifecycle Management and Requirements management tool for distributed software development" \\[2em]
+   
   \end{center}
   \pause
   \begin{itemize}
-    \item Track bugs and code changes.
+    \item Proprietary, free version
       \pause
-    \item Communicate with teammates.
-      \pause
-    \item Submit and review patches.
-      \pause
-    \item Manage quality assurance (QA).
+    
+    \item Backend: MySQL, Oracle, Apache Derby or Postgres
+    \pause
+    \item CodeBeamer is the award winning Collaborative Requirements Management (RM) and Application Lifecycle Management (ALM) solution for distributed software development
   \end{itemize}
 }
+%Codebeamer compare
+\frame{
+  \transdissolve[duration=0.25]
+  \frametitle{Standalone bug trackers}
+  \begin{center}
+    {\Huge CodeBeamer compare to Others} \\[1em]
+    \pause
+       
+  \end{center}
+   
+    {\Large Bugzilla}
+	
+	\pause
+    \begin{itemize}
+      \item MPL (free, open source, developed/maintained by Mozilla Foundation)
+        \pause
+      \item backend: MySQL, Oracle, PostgreSQL, SQLite
+      \pause
+      
+    \end{itemize}
+    
+    
+    {\Large Google Code Hosting}
 
+	\pause
+    \begin{itemize}
+      \item Proprietary, hosted; available for open source projects (by Google Code)
+        \pause
+      \item BigTable backend (also proprietary)
+    \end{itemize}
+}
+%IDE	
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Editors and IDEs}
