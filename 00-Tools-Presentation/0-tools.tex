@@ -1,13 +1,14 @@
 \documentclass{beamer}
 \title{Assignment 1: Tools}
 %\subtitle{}
-\author{$<$Joe Lee$>$}
+\author{Joe Lee}
 \subject{Tools}
 \usetheme{Darmstadt}
 \usecolortheme{beaver}
 \useoutertheme{infolines}
 \useinnertheme{circles}
 \usepackage{comment}
+\setbeamertemplate{bibliography item}[text]
 
 \setbeamertemplate{footline} { 
   \leavevmode
@@ -24,443 +25,362 @@
 
 \begin{document}
 \maketitle
-\frame{
-  \transdissolve[duration=0.25]
+
+%Introduction
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{The Team}
-  \framesubtitle{Ryan Alcoran, Joe Lee, Shivalik Narad, Nam Phan, Swapna Vemparala, Amber Wong}
+  \framesubtitle{Ryan Alcoran, Joe Lee, Shivalik Narad, Nam Phan,
+    Swapna Vemparala, Amber Wong}
   \begin{center}
     {\Huge Team Q 06}\\[1em]
   \end{center}
   \pause
   \begin{itemize}
-    \item Lee, Joe \{Business Manager\}
-      \pause
-    \item Vemparala, Swapna \{Project Manager\}
-    \pause
-    \item Wong, Amber \{Risk Manager\}
-    \pause
-    \item Narad, Shivalik \{Development Manager\}
-      \pause
-    \item Phan, Nam \{Development Manager\}
-      \pause
-        \item Alcoran, Ryan \{Test Manager\}
+    \item Lee, Joe - Business Manager \pause
+    \item Vemparala, Swapna - Project Manager \pause
+    \item Wong, Amber - Risk Manager \pause
+    \item Narad, Shivalik - Development Manager \pause
+    \item Phan, Nam - Development Manager \pause
+    \item Alcoran, Ryan - Test Manager
   \end{itemize}
 }
 
-%Introduction
-\frame{
-  \transdissolve[duration=0.25]
-  \frametitle{Software Configuration Management (SCM)}
-  \framesubtitle{Tracking and controlling changes in software}
-  \begin{center}
-  	{\Huge Language: Java} \\[1em]
-{\small"Java is an object-oriented programming language developed by Sun Microsystems in the early 1990s. The language is very similar in syntax to C and C++ but it has a simpler object model and fewer low-level facilities."} \\[2em]
-  	\pause
-    {\Huge Tools} \\[1em]
+%Java
+\frame{ \transdissolve[duration=0.25] 
+  \frametitle{Language \& Tools}
+  {\Huge Java} \pause \\[1em] 
+    Object-oriented, \pause similar in syntax to C and C++, \pause 
+    but has \pause simpler object model \pause and \pause fewer 
+    low-level facilities.\cite{java} \\[2em] \pause
+  {\Huge Tools} \\[1em]
     \pause
     \begin{itemize}
-      \item Software Configuration Management: {\bf EGit}
-        
-      \item Software Hosting Facility: {\bf Github}
-        
-        \item Standalone Bug Tracker: {\bf Codebeamer}
-     
-        \item Editor and IDE: {\bf Eclipse}
-       
-        \item  Project Management: {\bf OpenProject}
-
+      \item Software Configuration Management: {\bf EGit} \pause 
+        and regular, command-line {\bf git} client. \pause
+      \item Software Hosting Facility: {\bf Github} \pause
+      \item Standalone Bug Tracker: {\bf Codebeamer} \pause
+      \item Editor and IDE: {\bf Eclipse} and {\bf Emacs} \pause
+      \item  Project Management: {\bf OpenProj} \pause
     \end{itemize}
-   
-  \end{center}
 }
 
 %Egit
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software Configuration Management (SCM)}
   \framesubtitle{Tracking and controlling changes in software}
-  \begin{center}
-    {\Huge EGit} \\[1em]
-    \pause
-    "The EGit project is implementing Eclipse tooling on top of a Java implementation of Git."\\[2em]
-    \pause
+  {\Huge EGit} \\[1em] \pause 
+    ``The EGit project is implementing Eclipse tooling on top of a Java
+    implementation of Git.''\\[2em] \pause
     \begin{itemize}
       \item free, open source, designed for branching and merging
-     
-      \item decentralized model (everyone has own copy of repository, which can later be merged)
-     
+      \item decentralized model (everyone has own copy of repository,
+        which can later be merged)     
       \item Can be integrated into Eclipse, using a plug-in.
     \end{itemize}
-  \end{center}
 }
 
 %Egit comparison
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software Configuration Management (SCM)}
   \framesubtitle{Tracking and controlling changes in software}
-  \begin{center}
-    {\Huge EGit compare to Others} \\[1em]
-    \pause
-        
-    \begin{flushleft}
-    {\Large Subversion}
-	\end{flushleft}
-	\pause
+    {\Huge EGit vs Others} \\[1em] \pause
+    {\Large Subversion} \pause
     \begin{itemize}
       \item free, open source, actively developed
-       
-      \item easier to use than Git (more tools available for non-technical users, error messages are easier to understand)
-      
-      \item centralized model (everyone has a working copy and changes are submitted to central repository)
-      \pause
+      \item easier to use than Git (more tools available for
+        non-technical users, error messages are easier to understand)
+      \item centralized model (everyone has a working copy and changes
+        are submitted to central repository) \pause
     \end{itemize}
-    
-    \begin{flushleft}
-    {\Large LibreSource}
-    \pause
-	\end{flushleft}
-	
+
+    {\Large LibreSource} \pause
     \begin{itemize}
-      \item free, open source, maintained and new features under development
-       
+    \item free, open source, maintained and new features under
+        development
     \end{itemize}
-  \end{center}
 }
 
 %Egit Installation
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software Configuration Management (SCM)}
   \framesubtitle{Tracking and controlling changes in software}
-  \begin{center}
-    {\Huge EGit Installation} \\[1em]
-    \pause
+    {\Huge EGit Installation} \\[1em] \pause
     \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/egit/egit1.PNG}
-  \caption{Instruction to install Egit into Eclispe}
-\end{figure}
-	
-  \end{center}
+      \includegraphics[width=0.8\textwidth]{Screenshots/egit/egit1.png}
+      \caption{Instruction to install Egit into Eclispe}
+    \end{figure}
 }
 
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software Configuration Management (SCM)}
   \framesubtitle{Tracking and controlling changes in software}
-  \begin{center}
     {\Huge EGit Installation} \\[1em]
     \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/egit/egit2.PNG}
-  \caption{Instruction to install Egit into Eclispe}
-\end{figure}
-	
-  \end{center}
+      \includegraphics[width=0.8\textwidth]{Screenshots/egit/egit2.png}
+      \caption{Instruction to install Egit into Eclispe}
+    \end{figure}
 }
 
 %Github
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub} \\[1em]
-    \pause
-"GitHub is a web-based hosting service for software development projects that use the Git revision control system"
-  \end{center}
+    {\Huge GitHub} \\[1em] \pause 
+    GitHub is a git hosting service. \pause In other words, \pause 
+    the company runs git servers for its users. \pause Git is a version 
+    control and source code management (SCM) system. \pause \\[1em]
+
+  GitHub is \pause
   \begin{itemize}
-  	\item Free for open source, paid for private.
-  	\pause
-  	\item Ad-free, not run on all free software.
+    \item Gratis for public projects \pause
+    \item Paid for non-public projects.
   \end{itemize}
 }
 
 %Github comparison
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge Github compare to Others} \\[1em]
-    \pause
-        
-    \begin{flushleft}
-    {\Large Google Code}
-	\end{flushleft}
-	\pause
-    \begin{itemize}
-      \item Free. For open-source projects only.
+    {\Huge Github vs Others} \\[1em] \pause
 
-      
-      \item Ad-free, not run on all free software
-      \pause
-    \end{itemize}
-    
-    \begin{flushleft}
-    {\Large Tigris}
-	\end{flushleft}
-	\pause
+    {\Large Google Code} \pause
+    \begin{itemize}
+      \item Gratis. For ``open source'' projects only. \pause
+      \item What is ``open source''? \pause
+    \end{itemize}    
+
+    {\Large Tigris} \pause
     \begin{itemize}
       \item Restricted to collaborative software development tools.
-     
-      \item Not ad-free
-       
     \end{itemize}
-  \end{center}
 }
-%Github installation
-\frame{
-  \transdissolve[duration=0.25]
-  \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub Installation} \\[1em]
-    \pause
-   \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/github1.PNG}
-  \caption{Github web UI and sample Repository}
-\end{figure}
 
-   \end{center}
+\frame{ \transdissolve[duration=0.25] 
+  \frametitle{Software Configuration Management (SCM)}
+  \centering {\Huge Using Git}\\on GitHub's servers
 }
-\frame{
-  \transdissolve[duration=0.25]
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/0login.png}
+      \caption{GitHub web site login page.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/1create.png}
+      \caption{Create a new git repository.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/2clone.png}
+      \caption{Clone the repository on your own computer.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/3edit.png}
+      \caption{Make edits and add files.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/4add.png}
+      \caption{Add changed files to your next commit.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/5commit.png}
+      \caption{Commit your changes.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/6comment.png}
+      \caption{Add a commit message to summarize changes.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/7push.png}
+      \caption{Push changes to the repository.}
+    \end{figure}
+}
+
+%Git client installation
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub Installation} \\[1em]
+    {\Huge Git client installation} \\[1em]
+    \pause
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/github1.png}
+      \caption{GitHub web UI and sample Repository}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+  \frametitle{Software hosting facilities}
+    {\Huge GitHub client installation} \\[1em]
    \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/github/github2.PNG}
+      \includegraphics[width=0.7\textwidth]{Screenshots/github/github2.png}
   \caption{Inside a repository and how to clone it}
 \end{figure}
-
-   \end{center}
 }
-\frame{
-  \transdissolve[duration=0.25]
+
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub Installation} \\[1em]
+    {\Huge GitHub client installation} \\[1em]
    \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/github/github3.PNG}
+      \includegraphics[width=0.7\textwidth]{Screenshots/github/github3.png}
   \caption{Github software for Windows}
 \end{figure}
-
-   \end{center}
 }
-\frame{
-  \transdissolve[duration=0.25]
+
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub Installation} \\[1em]
+    {\Huge GitHub client installation} \\[1em]
    \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/github/github7.PNG}
+      \includegraphics[width=0.7\textwidth]{Screenshots/github/github7.png}
   \caption{Github software UI}
 \end{figure}
-
-   \end{center}
 }
-\frame{
-  \transdissolve[duration=0.25]
+
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub Installation} \\[1em]
+    {\Huge GitHub client installation} \\[1em]
    \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/github/github4.PNG}
+      \includegraphics[width=0.7\textwidth]{Screenshots/github/github4.png}
   \caption{Manage and Commit Repo}
 \end{figure}
-
-   \end{center}
 }
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub Installation} \\[1em]
+    {\Huge GitHub client installation} \\[1em]
    \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/github/github5.PNG}
+      \includegraphics[width=0.7\textwidth]{Screenshots/github/github5.png}
   \caption{Manage and Commit Repo}
 \end{figure}
-
-   \end{center}
 }
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Software hosting facilities}
-  \begin{center}
-    {\Huge GitHub Installation} \\[1em]
+    {\Huge GitHub client installation} \\[1em]
    \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/github/github6.PNG}
+      \includegraphics[width=0.7\textwidth]{Screenshots/github/github6.png}
   \caption{Result and History of Committing}
 \end{figure}
-
-   \end{center}
 }
 %Codebeamer
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
-    {\Huge CodeBeamer} \\[1em]
-    \pause
-    "CodeBeamer is a web based Collaborative Application Lifecycle Management and Requirements management tool for distributed software development" \\[2em]
-   
-  \end{center}
-  \pause
+    {\Huge CodeBeamer} \\[1em] \pause 
+    ``CodeBeamer is a web based Collaborative Application Lifecycle
+    Management and Requirements management tool for distributed
+    software development'' \\[2em] \pause
   \begin{itemize}
-    \item Proprietary, free version
-   
-    
-    \item Backend: MySQL, Oracle, Apache Derby or Postgres
-  
-    \item CodeBeamer is the award winning Collaborative Requirements Management (RM) and Application Lifecycle Management (ALM) solution for distributed software development
+    \item Nonfree
+    \item Backend: MariaDB (a.k.a. MySQL), Oracle, Apache Derby or
+      PostgreSQL
+    \item CodeBeamer is a collaborative Requirements Management (RM)
+      and Application Lifecycle Management (ALM) solution for
+      distributed software development.
   \end{itemize}
 }
+
 %Codebeamer compare
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
-    {\Huge CodeBeamer compare to Others} \\[1em]
-    \pause
-       
-  \end{center}
-   
-    {\Large Bugzilla}
-	
-	\pause
-    \begin{itemize}
-      \item MPL (free, open source, developed/maintained by Mozilla Foundation)
-       
-      \item backend: MySQL, Oracle, PostgreSQL, SQLite
-      \pause
-      
-    \end{itemize}
-    
-    
-    {\Large Google Code Hosting}
+    {\Huge CodeBeamer vs Others} \\[1em] \pause
 
-	\pause
-    \begin{itemize}
-      \item Proprietary, hosted; available for open source projects (by Google Code)
-       
-      \item BigTable backend (also proprietary)
-    \end{itemize}
+  {\Large Bugzilla} \pause
+  \begin{itemize}
+  \item Licensed under the Mozilla Public License (a GNU
+    GPL-compatible license, which means it is free software, so you
+    have the freedom to run your own copy on your own server),
+    developed/maintained by Mozilla Foundation.
+  \item backend: MariaDB, Oracle, PostgreSQL, SQLite \pause
+  \end{itemize}
+
+  {\Large Google Code Hosting} \pause
+  \begin{itemize}
+  \item Not distributed as software that you can run on your own
+    computer (hosted only); available for ``open source'' projects (by
+    Google Code)
+  \item BigTable backend (also proprietary)
+  \end{itemize}
 }
+
 %Codebeamer installation
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
-    {\Huge CodeBeamer Installation} \\[1em]
-    \pause
-       \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer1.PNG}
-  \caption{Download}
-\end{figure}
-       
-  \end{center}    
+    {\Huge CodeBeamer Installation} \\[1em] \pause
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer1.png}
+      \caption{Download}
+    \end{figure}
 }
+
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
     {\Huge CodeBeamer Installation} \\[1em]
-   
-       \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer2.PNG}
-  \caption{Download}
-\end{figure}
-       
-  \end{center}    
+    \begin{figure}[h!]
+      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer2.png}
+      \caption{Download}
+    \end{figure}   
 }
+
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
     {\Huge CodeBeamer Installation} \\[1em]
-    
-       \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer6.PNG}
-  \caption{Download}
-\end{figure}
-       
-  \end{center}    
+    \begin{figure}[h!]
+      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer6.png}
+      \caption{Download}
+    \end{figure}   
 }
+
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
     {\Huge CodeBeamer Installation} \\[1em]
-    
-       \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer3.PNG}
-  \caption{Web UI in localhost}
-\end{figure}
-       
-  \end{center}    
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer3.png}
+      \caption{Web UI in localhost}
+    \end{figure}
 }
+
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
     {\Huge CodeBeamer Installation} \\[1em]
-    
-       \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer4.PNG}
-  \caption{Register User}
-\end{figure}
-       
-  \end{center}    
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer4.png}
+      \caption{Register User}
+    \end{figure}
 }
+
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Standalone bug trackers}
-  \begin{center}
     {\Huge CodeBeamer Installation} \\[1em]
-    
-       \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer5.PNG}
-  \caption{User's Management UI}
-\end{figure}
-       
-  \end{center}    
+    \begin{figure}[h!]
+      \includegraphics[width=0.7\textwidth]{Screenshots/codeBeamer/codeBeamer5.png}
+      \caption{User's Management UI}
+    \end{figure}
 }
-%IDEs: Netbeans and Eclipse	
-\frame{
-  \transdissolve[duration=0.25]
-  \frametitle{Editors and IDEs}
-\framesubtitle{Netbeans, Eclipse, GNU Emacs}
-  \pause
-  \begin{center}
-  \begin{itemize}
-    \item {\bf NetBeans IDE}
-      \pause
-      \begin{itemize}
-        \item Dual-licensed under Common Development and Distribution License (CDDL) v1.0 and GNU GPLv2, with some components released other third-party licenses
-          \pause
-        \item Create and debug rich web and mobile applications using the latest HTML5, \pause JavaScript, \pause and CSS3 standards.
-          \pause
-        \item Page inspector
-          \pause
-        \item CSS style editor
-          \pause
-        \item JavaScript editor
-          \pause
-        \item JavaScript debugger
-          \pause
-        \item Support for PHP, Java, C, C++
-          \pause
-      \end{itemize}
-    \item {\bf Eclipse}
-      \pause
-      \begin{itemize}
-        \item License: MPL
-          \pause
-        \item IDE framework
-          \pause
-        \item Tools framework\\[1em]
-      \end{itemize}
-      \pause
-  \end{itemize}
-  \end{center}
-}
+
 %IDEs: GNU Emacs
 \frame{
   \transdissolve[duration=0.25]
@@ -480,240 +400,224 @@
       \end{itemize}
   \end{itemize}
 }
+
+%IDEs: Netbeans and Eclipse
+\frame{
+  \transdissolve[duration=0.25]
+  \frametitle{Editors and IDEs}
+  \framesubtitle{Netbeans, Eclipse, Emacs} \pause
+    \begin{itemize}
+    \item {\bf NetBeans IDE} \pause
+      \begin{itemize}
+        \item Dual-licensed under Common Development and Distribution
+          License (CDDL) v1.0 and GNU GPLv2, with some components
+          released other third-party licenses \pause
+        \item Create and debug rich web and mobile applications using
+          the latest HTML5, \pause JavaScript, \pause and CSS3
+          standards.  \pause
+        \item Page inspector \pause
+        \item CSS style editor \pause
+        \item JavaScript editor \pause
+        \item JavaScript debugger \pause
+        \item Support for PHP, Java, C, C++ \pause
+      \end{itemize}
+    \item {\bf Eclipse} \pause
+      \begin{itemize}
+        \item License: MPL \pause
+        \item IDE framework \pause
+        \item Tools framework \pause \\[1em]
+      \end{itemize}
+    \end{itemize}
+}
+
 %Eclipse Installation
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Editors and IDEs}
   \framesubtitle{http://www.eclipse.org/downloads/}
-	\begin{center}
-    {\Huge Eclipse Installation}\\[1em]
-    \pause
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse1.PNG}
-  \caption{Download}
-\end{figure}
-    \end{center}
-}
-\frame{
-  \transdissolve[duration=0.25]
-  \frametitle{Editors and IDEs}
-
-	\begin{center}
-    {\Huge Eclipse Installation}\\[1em]
-
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse2.PNG}
-  \caption{Workspace}
-\end{figure}
-    \end{center}
+    {\Huge Eclipse Installation} \pause \\[1em]
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse1.png}
+      \caption{Download}
+    \end{figure}
 }
 
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Editors and IDEs}
-
-	\begin{center}
     {\Huge Eclipse Installation}\\[1em]
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse2.png}
+      \caption{Workspace}
+    \end{figure}
+}
 
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse3.PNG}
-  \caption{Create new project}
-\end{figure}
-    \end{center}
+\frame{ \transdissolve[duration=0.25] 
+  \frametitle{Editors and IDEs}
+    {\Huge Eclipse Installation}\\[1em]
+    \begin{figure}[h!]   
+       \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse3.png}
+      \caption{Create new project}
+     \end{figure}
 }
 
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Editors and IDEs}
-
-	\begin{center}
     {\Huge Eclipse Installation}\\[1em]
-
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse4.PNG}
-  \caption{Create new project}
-\end{figure}
-    \end{center}
+    \begin{figure}[h!]   
+       \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse4.png}
+      \caption{Create new project}
+     \end{figure}
 }
-\frame{
-  \transdissolve[duration=0.25]
+
+\frame{ \transdissolve[duration=0.25]
   \frametitle{Editors and IDEs}
-
-	\begin{center}
     {\Huge Eclipse Installation}\\[1em]
-
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse6.PNG}
-  \caption{Running Program}
-\end{figure}
-    \end{center}
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse6.png}
+      \caption{Running Program}
+    \end{figure}
 }
-\frame{
-  \transdissolve[duration=0.25]
+
+\frame{ \transdissolve[duration=0.25]
   \frametitle{Editors and IDEs}
-
-	\begin{center}
     {\Huge Eclipse Installation}\\[1em]
-
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse5.PNG}
-  \caption{Error Logs}
-\end{figure}
-    \end{center}
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/eclipse/eclipse5.png}
+      \caption{Error Logs}
+    \end{figure}
 }
 %OpenProj
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25]
   \frametitle{Project Management Tools}
-  \begin{center}
-    {\Huge OpenProj}\\[1em]
-    \pause
-    "OpenProj is an open source project management software application. It intends to be a complete desktop replacement for Microsoft Project. It runs on the Java platform, allowing it to run on a variety of different operating systems"\\[2em]
-    \pause
+    {\Huge OpenProj}\\[1em] \pause 
+    ``OpenProj is an open source project management software
+    application. It intends to be a complete desktop replacement for
+    Microsoft Project. It runs on the Java platform, allowing it to
+    run on a variety of different operating systems''\\[2em] \pause
     \begin{itemize}
-        \item License: Free, open source project management application that supports project timelines, issue tracking, wiki, document management, time and cost reporting, code management, Scrum, and more.
-        \item Earned Value costing  
-        \item Gantt chart
-          
-        \item Resource Breakdown Structure (RBS) chart
-       
-      \end{itemize}
-  \end{center}
+    \item License: Free, open source project management application
+      that supports project timelines, issue tracking, wiki, document
+      management, time and cost reporting, code management, Scrum, and
+      more.
+    \item Earned Value costing
+    \item Gantt chart      
+    \item Resource Breakdown Structure (RBS) chart
+    \end{itemize}
 }
+
 %OpenProj vs. Microsoft Project
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25]
   \frametitle{Project Management Tools}
-  \begin{center}
     {\Huge OpenProj vs. Microsoft Project}\\[1em]
     \pause
-    \end{center}
-    {\Large Similar}
-    \begin{itemize}
-    	\item user interface and approach to construction of project plan
-        \item create workbench breakdown structure
-        \item assign resources  
-        \pause
+  {\Large Similar}
+  \begin{itemize}
+  \item user interface and approach to construction of project plan
+  \item create workbench breakdown structure
+  \item assign resources \pause
       \end{itemize}
-  {\Large Different}
-    \begin{itemize}
-    	\item OpenProj can link upwards with methods (inserting tasks is more difficult than with Microsoft Project)
-
-        \item OpenProj can just create resources (have to do so in the resource sheet)
-        \item OpenProj lacks a more detailed view and project reports that is available with Microsoft Project  
-        
-      \end{itemize}
+          {\Large Different}
+          \begin{itemize}
+    	  \item OpenProj can link upwards with methods (inserting tasks is more difficult than with Microsoft Project)
+            
+          \item OpenProj can just create resources (have to do so in the resource sheet)
+          \item OpenProj lacks a more detailed view and project reports that is available with Microsoft Project  
+            
+          \end{itemize}
 }
 %OpenProj installation
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Project Management Tools}
-  \begin{center}
     {\Huge OpenProj Installation}\\[1em]
     \pause
      \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj1.PNG}
+      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj1.png}
   \caption{Download}
 \end{figure}
-    \end{center}
    
 }
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25]
   \frametitle{Project Management Tools}
-  \begin{center}
     {\Huge OpenProj Installation}\\[1em]
-	\begin{itemize}
-			\item Step 1 – Double click and open the downloaded file. A dialog box will appear.
-			\item Step 2 – Hit run button on the dialog box.
-			\item Step 3 – Choose the directory where you want to install. And click next.
-			\item Step 4 – click install
-			\item Step 5 – click Finish. And your installation will be complete.
-	
-	\end{itemize}
-     
-    \end{center}
-   
-}
-\frame{
-  \transdissolve[duration=0.25]
-  \frametitle{Project Management Tools}
-  \begin{center}
-    {\Huge OpenProj Installation}\\[1em]
+    \begin{itemize}
+    \item Step 1 – Double click and open the downloaded file. A dialog
+      box will appear.
+    \item Step 2 – Hit run button on the dialog box.
+    \item Step 3 – Choose the directory where you want to install. And
+      click next.
+    \item Step 4 – click install
+    \item Step 5 – click Finish. And your installation will be
+      complete.
+    \end{itemize}
+} 
 
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj2.PNG}
-  \caption{OpenProj's UI}
-\end{figure}
-    \end{center}
-   
-}
-\frame{
-  \transdissolve[duration=0.25]
+\frame{ \transdissolve[duration=0.25] 
   \frametitle{Project Management Tools}
-  \begin{center}
     {\Huge OpenProj Installation}\\[1em]
-
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj3.PNG}
-  \caption{Create new Project}
-\end{figure}
-    \end{center}
-   
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj2.png}
+      \caption{OpenProj's UI}
+    \end{figure}
 }
-\frame{
-  \transdissolve[duration=0.25]
-  \frametitle{Project Management Tools}
-  \begin{center}
-    {\Huge OpenProj Installation}\\[1em]
 
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj4.PNG}
-  \caption{A project with empty sheet}
-\end{figure}
-    \end{center}
-   
+\frame{ \transdissolve[duration=0.25]
+  \frametitle{Project Management Tools}
+    {\Huge OpenProj Installation}\\[1em]
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj3.png}
+      \caption{Create new Project}
+    \end{figure}
 }
-\frame{
-  \transdissolve[duration=0.25]
-  \frametitle{Project Management Tools}
-  \begin{center}
-    {\Huge OpenProj Installation}\\[1em]
 
-     \begin{figure}[h!]   
-      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj5.PNG}
-  \caption{A project with details and timeline}
-\end{figure}
-    \end{center}
-   
+\frame{ \transdissolve[duration=0.25]
+  \frametitle{Project Management Tools}
+    {\Huge OpenProj Installation}\\[1em]
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj4.png}
+      \caption{A project with empty sheet}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25]
+  \frametitle{Project Management Tools}
+    {\Huge OpenProj Installation}\\[1em]
+    \begin{figure}[h!]   
+      \includegraphics[width=0.7\textwidth]{Screenshots/openProj/openProj5.png}
+      \caption{A project with details and timeline}
+    \end{figure}
 }
 
 %References
-\frame{
+\begin{frame}
   \transdissolve[duration=0.25]
   \frametitle{References}
-  \begin{center}
-\begin{itemize}
-	\item \url{http://en.wikipedia.org/wiki/Comparison_of_revision_control_software}
-	\item \url{http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities}
-	\item \url{http://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems}
-	\item \url{http://en.wikipedia.org/wiki/OpenProj\#Comparison_to_Microsoft_Project}
-	\item \url{http://looble.org/git-vs-svn-which-is-better/}
-	\item \url{http://slashdot.org/topic/bi/visual-studio-vs-eclipse-a-programmers-matchup/}
-	\item \url{http://www.programmers.kz/programming/java/articles_java/14715-some-background-information-on-java-and-object-orientation.html}
-\end{itemize}
-    \end{center}
-    
+
+  \begin{thebibliography}{10}
+  \bibitem{RCS} {\tiny
+          http://en.wikipedia.org/wiki/Comparison\_of\_revision\_control\_software}
+  \bibitem{hosting} {\tiny
+          http://en.wikipedia.org/wiki/Comparison\_of\_open-source\_software\_hosting\_facilities}
+  \bibitem{bugtracking} {\tiny
+          http://en.wikipedia.org/wiki/Comparison\_of\_issue-tracking\_systems}
+  \bibitem{proj} {\tiny
+          http://en.wikipedia.org/wiki/OpenProj\#Comparison\_to\_Microsoft\_Project}
+  \bibitem{git} {\tiny http://looble.org/git-vs-svn-which-is-better/}
+  \bibitem{eclipse} {\tiny
+          http://slashdot.org/topic/bi/visual-studio-vs-eclipse-a-programmers-matchup/}
+  \bibitem{java} {\tiny
+          http://www.programmers.kz/programming/java/articles\_java/14715-some-background-information-on-java-and-object-orientation.html}
+  \end{thebibliography}
+\end{frame}
+
+\frame{ \transdissolve[duration=0.25]
+  {\centering
+    \begin{tabular}{l}
+      {\Huge Team Q 06} \\[.5em]
+      {\Huge thanks you\ldots}
+    \end{tabular}
+  }
 }
 
-%References
-\frame{
-  \transdissolve[duration=0.25]
-  \begin{center}
-   {\Huge Team Q 06}\\[1em]
-    {\Huge Thank you!}\\[2em]
-
-    \end{center}
-    
-}
 \end{document}
