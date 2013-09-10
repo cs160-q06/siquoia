@@ -33,16 +33,18 @@
     Swapna Vemparala, Amber Wong}
   \begin{center}
     {\Huge Team Q 06}\\[1em]
-  \end{center}
   \pause
-  \begin{itemize}
-    \item Lee, Joe - Business Manager \pause
-    \item Vemparala, Swapna - Project Manager \pause
-    \item Wong, Amber - Risk Manager \pause
-    \item Narad, Shivalik - Development Manager \pause
-    \item Phan, Nam - Development Manager \pause
-    \item Alcoran, Ryan - Test Manager
-  \end{itemize}
+  \begin{tabular}{lll}
+    Name                & Role                  & Major\\
+    \hline
+    Lee, Joe            & Business Manager      & CS\\ \pause
+    Vemparala, Swapna   & Project Manager       & CS\\ \pause
+    Wong, Amber         & Risk Manager          & CS\\ \pause
+    Narad, Shivalik     & Development Manager   & CS\\ \pause
+    Phan, Nam           & Development Manager   & CS\\ \pause
+    Alcoran, Ryan       & Test Manager          & CS
+  \end{tabular}
+  \end{center}
 }
 
 %Java
@@ -51,17 +53,168 @@
   {\Huge Java} \pause \\[1em] 
     Object-oriented, \pause similar in syntax to C and C++, \pause 
     but has \pause simpler object model \pause and \pause fewer 
-    low-level facilities.\cite{java} \\[2em] \pause
+    low-level facilities. \cite{java} \\[2em] \pause
   {\Huge Tools} \\[1em]
     \pause
     \begin{itemize}
-      \item Software Configuration Management: {\bf EGit} \pause 
-        and regular, command-line {\bf git} client. \pause
-      \item Software Hosting Facility: {\bf Github} \pause
+      \item Software Hosting Facility: {\bf GitHub} \pause
+      \item Software Configuration Management: {\bf Git} \pause 
+        used with command-line {\bf git} client or with 3rd-party 
+        client applications like EGit. \pause
       \item Standalone Bug Tracker: {\bf Codebeamer} \pause
       \item Editor and IDE: {\bf Eclipse} and {\bf Emacs} \pause
       \item  Project Management: {\bf OpenProj} \pause
     \end{itemize}
+}
+
+%Github
+\frame{ \transdissolve[duration=0.25] 
+  \frametitle{Software hosting facilities}
+    {\Huge GitHub} \\[1em] \pause 
+    GitHub is a git hosting service. \pause In other words, \pause 
+    the company runs git servers for its users. \pause Git is a version 
+    control and source code management (SCM) system. \cite{hosting} 
+    \pause \\[1em]
+
+  GitHub is \pause
+  \begin{itemize}
+    \item Gratis for public projects \pause
+    \item Paid for non-public projects.
+  \end{itemize}
+}
+
+%Github comparison
+\frame{ \transdissolve[duration=0.25] 
+  \frametitle{Software hosting facilities}
+    {\Huge Github vs Others \cite{RCS}} \\[1em] \pause
+
+    {\Large Google Code} \pause
+    \begin{itemize}
+      \item Gratis. For ``open source'' projects only. \pause
+      \item What is ``open source''? \pause
+    \end{itemize}    
+
+    {\Large Tigris} \pause
+    \begin{itemize}
+      \item Restricted to collaborative software development tools.
+    \end{itemize}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+  \frametitle{Software Configuration Management (SCM)}
+  \centering {\Huge Using Git}\\on GitHub's servers
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/0login.png}
+      \caption{GitHub web site login page.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/1create-a.png}
+      \caption{Click on the "Create a new repo" icon.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/1create-b.png}
+      \caption{Name, describe, and initialize a new repo with a README file.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/1create-c.png}
+      \caption{New repo named "newrepo" initialized. Copy the SSH address for the git repo.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/2clone-a.png}
+      \caption{The command to clone the new repo at the address git@github.com:cs160-q06/newrepo.git.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/2clone-b.png}
+      \caption{Cloned.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/2clone-c.png}
+      \caption{The cloned repo is in the directory named "newrepo".}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/2clone-d.png}
+      \caption{Enter the newrepo directory and list the files inside.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/3edit-a.png}
+      \caption{Edit a file in the repo.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/3edit-b.png}
+      \caption{Edit a file in the repo.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/4add.png}
+      \caption{Add changed files to your next commit using the command "git add ." to add all changes in the present working directory.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/5commit-a.png}
+      \caption{Commit your changes.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/5commit-b.png}
+      \caption{Enter a commit message to summarize your changes.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/5commit-c.png}
+      \caption{Commit complete.}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/6push-a.png}
+      \caption{Push changes to the repository using the command "git push".}
+    \end{figure}
+}
+
+\frame{ \transdissolve[duration=0.25] 
+    \begin{figure}[h!]   
+      \includegraphics[width=0.8\textwidth]{Screenshots/github/6push-b.png}
+      \caption{Changes committed and pushed to the repository.}
+    \end{figure}
 }
 
 %Egit
@@ -84,11 +237,11 @@
   \frametitle{Software Configuration Management (SCM)}
   \framesubtitle{Tracking and controlling changes in software}
     {\Huge EGit vs Others} \\[1em] \pause
-    {\Large Subversion} \pause
+    {\Large Subversion} \cite{git} \pause
     \begin{itemize}
       \item free, open source, actively developed
       \item easier to use than Git (more tools available for
-        non-technical users, error messages are easier to understand)
+        non-technical users, error messages are easier to understand) 
       \item centralized model (everyone has a working copy and changes
         are submitted to central repository) \pause
     \end{itemize}
@@ -121,99 +274,6 @@
     \end{figure}
 }
 
-%Github
-\frame{ \transdissolve[duration=0.25] 
-  \frametitle{Software hosting facilities}
-    {\Huge GitHub} \\[1em] \pause 
-    GitHub is a git hosting service. \pause In other words, \pause 
-    the company runs git servers for its users. \pause Git is a version 
-    control and source code management (SCM) system. \pause \\[1em]
-
-  GitHub is \pause
-  \begin{itemize}
-    \item Gratis for public projects \pause
-    \item Paid for non-public projects.
-  \end{itemize}
-}
-
-%Github comparison
-\frame{ \transdissolve[duration=0.25] 
-  \frametitle{Software hosting facilities}
-    {\Huge Github vs Others} \\[1em] \pause
-
-    {\Large Google Code} \pause
-    \begin{itemize}
-      \item Gratis. For ``open source'' projects only. \pause
-      \item What is ``open source''? \pause
-    \end{itemize}    
-
-    {\Large Tigris} \pause
-    \begin{itemize}
-      \item Restricted to collaborative software development tools.
-    \end{itemize}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-  \frametitle{Software Configuration Management (SCM)}
-  \centering {\Huge Using Git}\\on GitHub's servers
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/0login.png}
-      \caption{GitHub web site login page.}
-    \end{figure}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/1create.png}
-      \caption{Create a new git repository.}
-    \end{figure}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/2clone.png}
-      \caption{Clone the repository on your own computer.}
-    \end{figure}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/3edit.png}
-      \caption{Make edits and add files.}
-    \end{figure}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/4add.png}
-      \caption{Add changed files to your next commit.}
-    \end{figure}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/5commit.png}
-      \caption{Commit your changes.}
-    \end{figure}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/6comment.png}
-      \caption{Add a commit message to summarize changes.}
-    \end{figure}
-}
-
-\frame{ \transdissolve[duration=0.25] 
-    \begin{figure}[h!]   
-      \includegraphics[width=0.8\textwidth]{Screenshots/github/7push.png}
-      \caption{Push changes to the repository.}
-    \end{figure}
-}
-
 %Git client installation
 \frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
@@ -227,7 +287,7 @@
 
 \frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-    {\Huge GitHub client installation} \\[1em]
+    {\Huge GitHub Windows client installation} \\[1em]
    \begin{figure}[h!]   
       \includegraphics[width=0.7\textwidth]{Screenshots/github/github2.png}
   \caption{Inside a repository and how to clone it}
@@ -236,7 +296,7 @@
 
 \frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-    {\Huge GitHub client installation} \\[1em]
+    {\Huge GitHub Windows client installation} \\[1em]
    \begin{figure}[h!]   
       \includegraphics[width=0.7\textwidth]{Screenshots/github/github3.png}
   \caption{Github software for Windows}
@@ -245,7 +305,7 @@
 
 \frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-    {\Huge GitHub client installation} \\[1em]
+    {\Huge GitHub Windows client installation} \\[1em]
    \begin{figure}[h!]   
       \includegraphics[width=0.7\textwidth]{Screenshots/github/github7.png}
   \caption{Github software UI}
@@ -254,7 +314,7 @@
 
 \frame{ \transdissolve[duration=0.25] 
   \frametitle{Software hosting facilities}
-    {\Huge GitHub client installation} \\[1em]
+    {\Huge GitHub Windows client installation} \\[1em]
    \begin{figure}[h!]   
       \includegraphics[width=0.7\textwidth]{Screenshots/github/github4.png}
   \caption{Manage and Commit Repo}
@@ -263,7 +323,7 @@
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Software hosting facilities}
-    {\Huge GitHub client installation} \\[1em]
+    {\Huge GitHub Windows client installation} \\[1em]
    \begin{figure}[h!]   
       \includegraphics[width=0.7\textwidth]{Screenshots/github/github5.png}
   \caption{Manage and Commit Repo}
@@ -272,7 +332,7 @@
 \frame{
   \transdissolve[duration=0.25]
   \frametitle{Software hosting facilities}
-    {\Huge GitHub client installation} \\[1em]
+    {\Huge GitHub Windows client installation} \\[1em]
    \begin{figure}[h!]   
       \includegraphics[width=0.7\textwidth]{Screenshots/github/github6.png}
   \caption{Result and History of Committing}
@@ -421,7 +481,7 @@
         \item JavaScript debugger \pause
         \item Support for PHP, Java, C, C++ \pause
       \end{itemize}
-    \item {\bf Eclipse} \pause
+    \item {\bf Eclipse} \cite{eclipse} \pause
       \begin{itemize}
         \item License: MPL \pause
         \item IDE framework \pause
@@ -494,7 +554,8 @@
     ``OpenProj is an open source project management software
     application. It intends to be a complete desktop replacement for
     Microsoft Project. It runs on the Java platform, allowing it to
-    run on a variety of different operating systems''\\[2em] \pause
+    run on a variety of different operating systems'' \cite{proj} 
+    \\[2em] \pause
     \begin{itemize}
     \item License: Free, open source project management application
       that supports project timelines, issue tracking, wiki, document
