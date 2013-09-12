@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\bibliographystyle{IEEEtran}
+\usepackage{parskip}
+\setlength{\parskip}{.5cm plus4mm minus3mm}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks]{hyperref}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    citecolor=black,
+    linkcolor=darkblue
+}
+\usepackage{glossaries}
+\renewcommand{\glossarysection}[2][]{}
+\makeglossaries
+\usepackage{makeidx}
+\makeindex
+\makeatletter
+  \renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}
+\makeatother
+\def\thesection {\Alph{section}}
+\def\thesubsection {\alph{subsection}}
+\def\thesubsubsection {\arabic{subsubsection}}
+\usepackage{titlesec}
+\titlespacing{\subsection}{2em}{0pt}{0pt}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+\title{Requirements Specification \\ {\large Version 1} \\[1em] {\large
+    Proposal for SIQuoIA} \\[1em] Group 6}
+
+\author{ Ryan Alcoran \and Joe Lee \and Shivalik Narad \and Nam Phan
+  \and Swapna Vemparala \and Amber Wong }
+
+\maketitle
+
+% Glossary items here.
+\newglossaryentry{term}
+{
+  name=term,
+  description={this is the definition of the word {\it term}}
+}
+
+
+\section{Preface}
+This is a proposal for the Simple Intelligence Quotient Increasing
+Application (SIQuoIA), a platform for running and managing quiz games.
+
+\section{Introduction}
+SIQuoIA will be a web-based quiz platform. It will include a quiz
+program which prompts users with multiple choice questions with four
+possible answers. One and only one of those answers is correct. 
+
+All users are allowed to submit quiz packets to be added to the pool
+of quizzes available to other users.
+
+Only users of the application who have sufficient privileges, such as
+moderators or instructors, are allowed to approve and add
+user-submitted quiz packets.
+
+\section{Glossary}
+\printglossaries
+
+\section{User requirements definition}
+
+
+\section{System architecture}
+To be submitted in v2 of the proposal.
+
+\section{System requirements specification}
+
+\section{System models}
+To be submitted in v2 of the proposal.
+
+\section{System evolution}
+Sneaking in the word {\it \gls{term}} again.
+
+\section{Appendices}
+
+\subsection{Hardware requirements}
+
+\printindex
+
+
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
