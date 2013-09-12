@@ -50,16 +50,28 @@ This is a proposal for the Simple Intelligence Quotient Increasing
 Application (SIQuoIA), a platform for running and managing quiz games.
 
 \section{Introduction}
-SIQuoIA will be a web-based quiz platform. It will include a quiz
-program which prompts users with multiple choice questions with four
-possible answers. One and only one of those answers is correct. 
+{\bf Purpose:} SIQuoIA provides users with a web-based quiz
+platform. It will include a quiz program which prompts users with
+multiple choice questions with four possible answers. One and only one
+of those answers is correct.
 
-All users are allowed to submit quiz packets to be added to the pool
-of quizzes available to other users.
+{\bf Scope:} All users will be allowed to submit quiz packets to be
+added to the pool of quizzes available to other users.
 
 Only users of the application who have sufficient privileges, such as
 moderators or instructors, are allowed to approve and add
 user-submitted quiz packets.
+
+SIQuoIA will keep track of users' progress on quizzes so that if a
+user logs off or is disconnected before a quiz is complete, that quiz
+can be resumed when the user logs back in to the system. Users' scores
+are also recorded.
+
+Quizzes will not be timed.
+
+Guest users are allowed to log in, but their scores will not be
+recorded and progress on incomplete quizzes can not be resumed once
+the user leaves the system.
 
 \section{Glossary}
 \printglossaries
