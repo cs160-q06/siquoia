@@ -12,7 +12,7 @@
     citecolor=black,
     linkcolor=darkblue
 }
-\usepackage{glossaries}
+\usepackage[nonumberlist]{glossaries}
 \renewcommand{\glossarysection}[2][]{}
 \makeglossaries
 \usepackage{makeidx}
@@ -38,11 +38,10 @@
 \maketitle
 
 % Glossary items here.
-\newglossaryentry{term}
-{
-  name=term,
-  description={this is the definition of the word {\it term}}
-}
+\newglossaryentry{term} { name=W3C, description={World Wide Web
+    Consortium; main international standards organization for the
+    World Wide Web (abbreviated WWW or W3); founded and currently led
+    by Tim Berners-Lee at MIT} }
 
 
 \section{Preface}
@@ -85,8 +84,8 @@ accounts.
 \printglossaries
 
 \section{User requirements definition}
-Users of SIQuoIA should have a working knowledge of how to use a web
-browser, how to register for an account.
+Users of SIQuoIA should have a working knowledge of how to use a
+\gls{W3C} standards-compliant web browser.
 
 \section{System architecture}
 To be submitted in v2 of the proposal.
