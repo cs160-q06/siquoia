@@ -38,7 +38,7 @@
 \maketitle
 
 % Glossary items here.
-\newglossaryentry{term} { name=W3C, description={World Wide Web
+\newglossaryentry{W3C} { name=W3C, description={World Wide Web
     Consortium; main international standards organization for the
     World Wide Web (abbreviated WWW or W3); founded and currently led
     by Tim Berners-Lee at MIT} }
@@ -80,23 +80,32 @@ instructor accounts, and to assign and change the privilege level of a
 user. Instructors will have the authority to create new student user
 accounts.
 
+Quizzes will be categorized by instructors or moderators into topics,
+subtopics, and subsubtopics (three levels).
+
+The interface will be in English only.
+
 \section{Glossary}
 \printglossaries
 
 \section{User requirements definition}
 Users of SIQuoIA should have a working knowledge of how to use a
-\gls{W3C} standards-compliant web browser.
+\gls{W3C} standards-compliant web browser, and must be able to read
+English.
 
 \section{System architecture}
 To be submitted in v2 of the proposal.
 
 \section{System requirements specification}
+The system will require a database management system (either MariaDB
+or PostgreSQL), and a Tomcat server, since the application will be
+written in Java.
 
 \section{System models}
 To be submitted in v2 of the proposal.
 
 \section{System evolution}
-Sneaking in the word {\it \gls{term}} again.
+
 
 \section{Appendices}
 
