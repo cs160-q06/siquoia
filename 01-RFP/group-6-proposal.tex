@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\bibliographystyle{IEEEtran}
+\usepackage{parskip}
+\setlength{\parskip}{.5cm plus4mm minus3mm}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks]{hyperref}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    citecolor=black,
+    linkcolor=darkblue
+}
+\usepackage[nonumberlist]{glossaries}
+\renewcommand{\glossarysection}[2][]{}
+\makeglossaries
+\usepackage{makeidx}
+\makeindex
+\makeatletter
+  \renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}
+\makeatother
+\def\thesection {\Alph{section}}
+\def\thesubsection {\alph{subsection}}
+\def\thesubsubsection {\arabic{subsubsection}}
+\usepackage{titlesec}
+\titlespacing{\subsection}{2em}{0pt}{0pt}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+\title{Requirements Specification \\ {\large Version 1} \\[1em] {\large
+    Proposal for SIQuoIA} \\[1em] Group 6}
+
+\author{ Ryan Alcoran \and Joe Lee \and Shivalik Narad \and Nam Phan
+  \and Swapna Vemparala \and Amber Wong }
+
+\maketitle
+
+% Glossary items here.
+\newglossaryentry{W3C} { name=W3C, description={World Wide Web
+    Consortium; main international standards organization for the
+    World Wide Web (abbreviated WWW or W3); founded and currently led
+    by Tim Berners-Lee at MIT} }
+
+
+\section{Preface}
+This is a proposal for the Simple Intelligence Quotient Increasing
+Application (SIQuoIA), a platform for running and managing quiz games.
+
+\section{Introduction}
+{\bf Purpose:} SIQuoIA provides users with a web-based quiz
+platform. It will include a quiz program which prompts users with
+multiple choice questions with four possible answers. One and only one
+of those answers is correct.
+
+{\bf Scope:} All users will be allowed to submit quiz packets to be
+added to the pool of quizzes available to other users.
+
+Only users of the application who have sufficient privileges, such as
+moderators or instructors, are allowed to approve and add
+user-submitted quiz packets.
+
+SIQuoIA will keep track of users' progress on quizzes so that if a
+user logs off or is disconnected before a quiz is complete, that quiz
+can be resumed when the user logs back in to the system. Users' scores
+are also recorded.
+
+Quizzes will not be timed.
+
+Guest users will be allowed to log in, but their scores will not be
+recorded and progress on incomplete quizzes can not be resumed once
+the user leaves the system.
+
+New users will be able to register for an account.
+
+There will three user privilege levels: student, instructor, and
+moderator. Moderators will have the authority create new student and
+instructor accounts, and to assign and change the privilege level of a
+user. Instructors will have the authority to create new student user
+accounts.
+
+Quizzes will be categorized by instructors or moderators into topics,
+subtopics, and subsubtopics (three levels).
+
+The interface will be in English only.
+
+\section{Glossary}
+\printglossaries
+
+\section{User requirements definition}
+Users of SIQuoIA should have a working knowledge of how to use a
+\gls{W3C} standards-compliant web browser, and must be able to read
+English.
+
+\section{System architecture}
+To be submitted in v2 of the proposal.
+
+\section{System requirements specification}
+The system will require a database management system (either MariaDB
+or PostgreSQL), and a Tomcat server, since the application will be
+written in Java.
+
+\section{System models}
+To be submitted in v2 of the proposal.
+
+\section{System evolution}
+
+
+\section{Appendices}
+
+\subsection{Hardware requirements}
+
+\printindex
+
+
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
