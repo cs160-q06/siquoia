@@ -1,0 +1,37 @@
+\documentclass[12pt]{paper}
+\title{CS 160 --- SQ06 Cost Estimations}
+\author{Ryan Alcoran \and Joe Lee \and Shivalik Narad \and Nam Phan \and Swapna Vemparala \and Amber Wong}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The purpose of this document is to provide a projected cost analysis
+of the quiz program known as SiQuoia. First, a description of SiQuoia
+and the scope of the project will be presented. Next, assumptions made
+by the project team will be included. Lastly, it will provide a
+breakdown of the costs based on the item type and will include a cost
+estimation (figures will be in USD) for each item, as well as a
+detailed explanation on specific entities included in the item type
+and contributing factors to the calculated cost. This document is
+intended for the client at SiQuoia Inc.
+
+\section{Project Description}
+The software system known as SiQuoia is a simple quiz program with
+problem sets consisting of one question and four answers with only one
+correct answer. The program is designed to increase intelligence
+quotient in users, provide training and certification processes. Each
+question will have a difficulty ranking based on the average number of
+tries it takes to answer the question correctly.
+
+The system will have a web browser interface in which users can log in
+and view any of their unfinished quizzes or start a new quiz, see
+their stats and achievements, or submit new questions. The user can
+also claim rewards such as memorabilia or other question sets and
+refer new users to join.
+
+The web interface will interact with a database to keep track of user
+and game information.
+
+
+\end{document}
