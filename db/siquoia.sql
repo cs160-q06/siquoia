@@ -22,5 +22,11 @@ CREATE TABLE questions(
 
 CREATE TABLE answers(
     answer VARCHAR(1024),
-    FOREIGN KEY (question_id) REFERENCES (question_id)
+    FOREIGN KEY (question_id) REFERENCES questions (question_id)
+);
+
+CREATE TABLE scores(
+    date_taken
+    FOREIGN KEY (user_id) REFERENCES users (id)
+    FOREIGN KEY (topic_id) REFERENCES topics (id)
 );
