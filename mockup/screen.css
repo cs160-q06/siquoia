@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle 1024px at 50% 0, #fff 0%, #fff 16%, 
+                                #333 90%) repeat fixed 0% 0% transparent;
+    min-height: 100%
+    height: auto !important;
+    height: 100%;
+    font-family: "Linux_Libertine_O_C";
+}
+
+#wallpaper {
+    position: absolute;
+    background-image: url(carbon-texture-alpha.png);
+    margin: 0 auto;
+    min-height: 100%
+    height: 100%;
+    width: 100%;
+}
+
+#logo {
+    padding-top: 32px;
+    text-align: center;
+    font-size: 89px;
+    letter-spacing: -9px;
+    text-shadow: #555 0 0 3px;
+}
+
+.small-link a {
+    color: #004f70;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#login {
+    width: 300px;
+    margin: 48px auto;
+    font-family: sans-serif;
+}
+
+.loginfield {
+    margin-top: 32px;
+    color: #4c4c4c;
+    font-size: 20px;
+}
+
+.loginfield input {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: #000 0 0 8px inset;
+    padding: 8px;
+    font-size: 20px; 
+    transition: box-shadow ease-out 1s;
+    transition: width ease-out 0.25s;
+}
+
+.loginfield input:focus {
+    width: 110%;
+    box-shadow: #004f70 0 0 10px inset;
+    transition: box-shadow ease-out 1s;
+    transition: width ease-out 0.25s;
+}
+
+#button {
+    margin-top: 32px;
+    width: 50%;
+    color: #fff;
+    background-color: #004f70;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    letter-spacing: 2px;
+    text-shadow: #000 0 0 2px;
+    cursor: pointer;
+    transition: all ease-out 0.5s;
+}
+
+#button:hover {
+    text-shadow: #fff 0 0 2px;
+    box-shadow: #000 0 0 4px, #fff 0 0 16px;
+    transition: all ease-out 0.5s;
+}
+
+.green { color: #0b5f00; }
+.blue { color: #004f70; }
+.red { color: #870000; }
+.orange { color: #ff680d; }
