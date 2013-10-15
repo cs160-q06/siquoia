@@ -3,15 +3,17 @@ CREATE TABLE users(
     email VARCHAR(128),
     password VARCHAR(40),
     admin BOOLEAN,
-    PRIMARY KEY (email)
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE topics(
     id INT NOT NULL AUTO_INCREMENT,
     topic VARCHAR(128) NOT NULL,
-    FOREIGN KEY (subtopic) REFERENCES topics (topic),
-    FOREIGN KEY (subsubtopic) REFERENCES topics (topic),
-    PRIMARY KEY (name)
+    subtopic_id INT,
+    subsubtopic_id INT,
+    FOREIGN KEY (subtopic_id) REFERENCES topics (id),
+    FOREIGN KEY (subsubtopic_id) REFERENCES topics (id),
+    PRIMARY KEY (id, subtopic_id, subsubtopic_id)
 );
 
 CREATE TABLE questions(
