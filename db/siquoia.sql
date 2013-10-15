@@ -22,18 +22,13 @@ CREATE TABLE questions(
     question_id INT NOT NULL AUTO_INCREMENT,
     topic_id INT,
     question VARCHAR(1024),
+    correct_answer VARCHAR(1024),
+    answer1 VARCHAR(1024),
+    answer2 VARCHAR(1024),
+    answer3 VARCHAR(1024),
     CONSTRAINT FOREIGN KEY (topic_id) REFERENCES topics (id)
         ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (question_id)
-);
-
-CREATE TABLE answers(
-    id INT NOT NULL AUTO_INCREMENT,
-    answer VARCHAR(1024),
-    question_id INT,
-    CONSTRAINT FOREIGN KEY (question_id) REFERENCES questions (question_id)
-        ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (id)
 );
 
 CREATE TABLE scores(
