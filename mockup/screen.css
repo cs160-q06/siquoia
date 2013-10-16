@@ -12,6 +12,7 @@ body {
     position: absolute;
     background-image: url(carbon-texture-alpha.png);
     margin: 0 auto;
+    min-width: 480px;
     min-height: 100%
     height: auto !important;
     height: 100%;
@@ -22,7 +23,7 @@ body {
     padding-top: 32px;
     text-align: center;
     font-size: 89px;
-    letter-spacing: -20px;
+    letter-spacing: -21px;
 }
 
 .small-link a {
