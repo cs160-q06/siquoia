@@ -21,8 +21,7 @@ body {
     padding-top: 32px;
     text-align: center;
     font-size: 89px;
-    letter-spacing: -9px;
-    text-shadow: #555 0 0 3px;
+    letter-spacing: -20px;
 }
 
 .small-link a {
@@ -34,7 +33,7 @@ body {
 }
 
 #login {
-    width: 300px;
+    width: 320px;
     margin: 48px auto;
     font-family: sans-serif;
 }
@@ -86,7 +85,18 @@ body {
     transition: all ease-out 0.5s;
 }
 
-.green { color: #0b5f00; }
+.green { color: #0b5f00; } 
 .blue { color: #004f70; }
 .red { color: #870000; }
 .orange { color: #ff680d; }
+
+.glow {
+    padding: 16px;
+    text-shadow: #555 0 0 3px, #000 0 1px 1px;
+    transition: text-shadow ease-out 2s;
+}
+
+.glow:hover {
+    text-shadow: #fff 0 0 4px, #fff 0 0 2px, #fff 0 0 8px, #004f70 0 0 16px;
+    transition: text-shadow ease-out 0.25s;
+}
