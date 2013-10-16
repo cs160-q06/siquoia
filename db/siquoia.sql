@@ -3,30 +3,38 @@ CREATE TABLE users(
     email VARCHAR(128),
     password VARCHAR(40),
     admin BOOLEAN,
-    PRIMARY KEY (email)
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE topics(
     id INT NOT NULL AUTO_INCREMENT,
     topic VARCHAR(128) NOT NULL,
-    FOREIGN KEY (subtopic) REFERENCES topics (topic),
-    FOREIGN KEY (subsubtopic) REFERENCES topics (topic),
-    PRIMARY KEY (name)
+    subtopic_id INT,
+    subsubtopic_id INT,
+    CONSTRAINT FOREIGN KEY (subtopic_id) REFERENCES topics (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (subsubtopic_id) REFERENCES topics (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (id, subtopic_id, subsubtopic_id)
 );
 
 CREATE TABLE questions(
     question_id INT NOT NULL AUTO_INCREMENT,
+    topic_id INT,
     question VARCHAR(1024),
-    FOREIGN KEY (topic) REFERENCES topics (topic)
-);
-
-CREATE TABLE answers(
-    answer VARCHAR(1024),
-    FOREIGN KEY (question_id) REFERENCES questions (question_id)
+    correct_answer VARCHAR(1024),
+    answer1 VARCHAR(1024),
+    answer2 VARCHAR(1024),
+    answer3 VARCHAR(1024),
+    CONSTRAINT FOREIGN KEY (topic_id) REFERENCES topics (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY (question_id)
 );
 
 CREATE TABLE scores(
-    date_taken
-    FOREIGN KEY (user_id) REFERENCES users (id)
+    date_taken TIMESTAMP(6),
+    user_id INT,
+    topic_id INT,
+    FOREIGN KEY (user_id) REFERENCES users (id),
     FOREIGN KEY (topic_id) REFERENCES topics (id)
 );

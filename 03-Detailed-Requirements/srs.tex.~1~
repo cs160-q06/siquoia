@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{longtable}
+
+\title{CS 160 -- SQ06 \\ SiQuoia Cost Estimates}
+\author{Ryan Alcoran \and Joe Lee \and Shivalik Narad \and Nam Phan \and Swapna Vemparala \and Amber Wong}
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\section{Introduction}
+This document provides a projected cost analysis of the quiz system
+SiQuoia. A brief description of SiQuoia and the scope of the project
+is provided. Assumptions made by the project team are stated
+explicitly, and a breakdown of costs is shown in the table in the last
+section.
+
+\section{Project Description}
+The software system SiQuoia provides a quiz program with problem sets
+consisting of questions that each have four possible answers, only one
+which is correct. The program is designed to increase the intelligence
+quotient of users, to provide training, and to be used in
+certification processes. The difficulty of each question will be
+ranked according to the frequency that users answer the question
+correctly or incorrectly.
+
+The system will have a web browser interface through which users can
+log in and view an unfinished quiz or start a new quiz. Users can view
+their quiz scores, submit new questions, and claim rewards such as
+memorabilia or other question sets. Users can earn points by referring
+new users to join.
+
+The web interface is connected to a MariaDB database through an
+underlying Java application stack. The database keeps track of user
+and quiz game information.
+
+\section{Scope}
+
+\section{Assumptions}
+\begin{itemize}
+\item Members of the project team all have a computer (laptop or
+  desktop) to access SiQuoia and do not need to purchase any
+  additional hardware for this project.
+\item All project team members have access to Internet throughout
+  the duration of the SiQuoia project.
+\item SiQuoia does not need to be hosted on the Internet. The server 
+  stack can be set up locally on any desktop or laptop computer.
+\item There are no specific tools that must be used in this
+  project. The project team is not restricted when choosing the tools
+  that will be used.
+\item No proprietary software will be used by the project team.
+\item No licensing will be required.
+\item Preparation for the project (requirements gathering) will begin
+  September 2013.
+\item The estimated period for contract is October 2013 to December
+  2013, or approximately 10 weeks.
+\item The duration of the project begins during preparation and
+  culminates when the contract period expires.
+\item Each project team member will be paid \$12.00 per hour of work.
+\item All team members will be involved with the design and
+  development of SiQuoia.
+\item During the design and development phases of the project, team
+  members will work 2.5 hours (150 minutes) per work day, totaling
+  12.5 hours (750 minutes) per week each.
+\item The estimated periods for design and development phases are 3
+  weeks each.
+\item Testing SiQuoia code will occur after each iteration of the
+  project. There will be 3 iterations, occurring at the end of each
+  week of development for approximately 2 hours.
+\item Designing the SiQuoia homepage/login screen and logo will take
+  approximately 3 hours.
+\item Throughout the duration of the project, each team member will
+  use approximately \$5.00 worth of gas per week for travel.
+\item Something about risks/delays of project
+\end{itemize}
+
+\section{Direct Cost Estimation}
+\begin{longtable}{|l|p{2.5cm}|l|p{6.4cm}|}
+\hline
+Number  & Item Type & Cost Estimation
+    & Explanation \\
+\hline
+\hline
+00  & Requirements gathering & \$780.00
+    & Salaries for all the team members for gathering requirments, both from reading the RFP and interviewing the client (30 minutes RFP, 35 minutes interview). \\
+\hline
+01  & Design    & \$27,000.00
+    & Saleries for all team members for designing all componentes of SiQuoia. \\
+\hline
+02  & Development   & \$27,000.00
+    & Salaries for all team members for designing all components of SiQuoia. \\
+\hline
+03  & Testing   & \$4,320.00
+    & Salaries for the test manager for testing the SiQuoia code. \\
+\hline
+04  & Graphic design    & \$2,160.00
+    & Cost for one team member to design the homepage/login interface and SiQuoia logo. \\
+\hline
+05  & Travel    & \$300.00
+    & Travel expenses for the team members in order to meet throughout the duration of the project, as well as meeting with the client. \\
+\hline
+06  & Equipment & \$1500.00
+    & Computers that team members will be using to design, develop, and document the project. \\
+\hline
+07  & Material  & \$65.00
+    & Ink, paper stock, and binding costs for documents. \\
+\hline
+08  & Subcontracts  & \$150.00
+    & Cost for hiring a graphic designer and outsourcing costs. \\
+\hline
+09  & Software  & \$128,000.00
+    & Donations to software projects for software used by the team. \\
+\hline
+10  & Training  & \$128.00 
+    & Cost of training development team. \\
+\hline
+11  & Upgrades and enhancements & \$1.00
+    & Cost of new requirements added, or changes to existing requirements that may be made at a later stage in the project. \\
+\hline
+12  & Maintenance   & \$1.00
+    & Maintenance of the software. \\
+\hline
+13  & Client meetings   & \$1.00
+    & Meetings with clients and team members. \\
+\hline
+14  & Bonuses   & \$1.00
+    & Bonuses to be paid to team members. \\
+\hline
+15  & Customer support  & \$1.00
+    & Customer support for users after the project is completed. \\
+\hline
+16  & Help desk & \$1.00
+    & Cost for providing help desk services to the end user. \\
+\hline
+\end{longtable}
+
+\end{document}

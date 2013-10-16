@@ -1,0 +1,144 @@
+\documentclass[12pt]{paper}
+\bibliographystyle{IEEEtran}
+\usepackage{parskip}
+\setlength{\parskip}{.5cm plus4mm minus3mm}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks]{hyperref}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    citecolor=black,
+    linkcolor=darkblue
+}
+\usepackage[nonumberlist]{glossaries}
+\renewcommand{\glossarysection}[2][]{}
+\makeglossaries
+\usepackage{makeidx}
+\makeindex
+%\makeatletter
+%  \renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}
+%\makeatother
+%\def\thesection {\Alph{section}}
+%\def\thesubsection {\alph{subsection}}
+%\def\thesubsubsection {\arabic{subsubsection}}
+\usepackage{titlesec}
+%\titlespacing{\subsection}{2em}{0pt}{0pt}
+\hyphenation{op-tical net-works semi-conduc-tor}
+\usepackage{longtable}
+
+\title{Software Requirements Specification v2.0} 
+
+\author{\hfill \hspace{4.09in} Ryan Alcoran\\ \hfill Joe Lee\\ \hfill
+  Shivalik Narad\\ \hfill Nam Phan\\ \hfill Swapna Vemparala\\ \hfill
+  Amber Wong\\[2em] \hfill {\bf CS 160 SQ06}}
+
+\makeglossaries
+\newglossaryentry{cloud}{ 
+  name=cloud,
+  description={servers hosted online that are used to store, manage, 
+    and access data}
+}
+\newglossaryentry{database}{
+  name=database,
+  description={collection of all information that will be used by the
+    SiQuoia system}
+}
+\newglossaryentry{gamer}{
+  name=gamer,
+  description={see {\it user}}
+}
+\newglossaryentry{MCQ}{
+  name=MCQ,
+  description={multiple choice quiz}
+}
+\newglossaryentry{product}{
+  name=product,
+  description={the multiple choice quiz game known as SiQuoia}
+}
+\newglossaryentry{progress analysis}{
+  name={progress analysis},
+  description={the user's highest quiz score (most number of questions
+    answered correctly) in a particular quiz packet, as well as the
+    combined score percentage of all quizzes}
+}
+\newglossaryentry{SeQuoia}{
+  name=SeQuoia,
+  description={the company SiQuoia, Inc.}
+}
+\newglossaryentry{SiQuoia}{
+  name=SiQuoia,
+  description={Simple Intelligence Quotient Increasing Application}
+}
+\newglossaryentry{SqQuoia}{
+  name=SqQuoia,
+  description={next generation common platform for running and
+    managing quiz games that carter to increasing intelligence
+    quotient and provides training and certification processes}
+}
+\newglossaryentry{user}{
+  name=user,
+  description={person(s) who operate or interact directly with the
+    product}
+}
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+
+\begin{table}[b]
+\centering
+\begin{tabular}{|l|r|l|r|}
+  \multicolumn{4}{l}{\bf Revision History} \\
+  \hline
+  Name                    & Date       & Reasons for changes  & Version \\
+  \hline
+  High-level requirements & 9/11/2013  & Initial creation     & 1 \\
+  \hline
+  Detailed requirements   & 9/29/2013  & Final draft          & 2 \\
+  \hline
+\end{tabular}
+\end{table}
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\section{Introduction}
+
+\subsection{Purpose}
+The purpose of this document\cite{IEEE:830-1998} is to provide a detailed description of
+the quiz program known as \gls{SiQuoia}. It will provide detailed
+descriptions of what this application will do, including functions
+and features of the program, interfaces, and constraints under which
+the program will operate. This document is intended for stakeholders
+at SiQuoia, Inc., known hereafter as \gls{SeQuoia}.
+
+\subsection{Scope}
+The software system known as SiQuoia includes a simple quiz program
+with packages consisting of one question and four answers, with only
+one answer being correct. The program is designed to increase the
+intelligence quotients of users or provide training or help in
+certification processes. Each question will have a rank based on the
+number of times it is answered correctly.
+
+The system will have a web browser interface in which \glspl{user}
+play as a guest or registered user. If registered, the system will
+allow users to log in, resume their most recently unfinished quiz (if
+such a quiz exists), select a game mode and begin a new quiz, view and
+publish their progress analysis, and submit new quiz questions. The
+system will also allow registered users to claim rewards in the game
+store using cash or SiQuoia points and refer new users.
+
+The web interface will interact with a database to keep track of user
+and game information.
+
+\subsection{Definitions, Acronyms, and Abbreviations}
+\printglossaries
+
+
+\bibliography{IEEEabrv,srs}
+
+\end{document}
