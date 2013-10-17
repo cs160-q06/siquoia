@@ -32,6 +32,12 @@ body {
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
+    transition: text-shadow 1s ease-in;
+}
+
+.small-link a:hover {
+    text-shadow: #fff 0 0 2px, #fff 0 0 8px;
+    transition: text-shadow 0.25s ease-out;
 }
 
 #login {
@@ -91,6 +97,7 @@ body {
 .blue { color: #004f70; }
 .red { color: #870000; }
 .orange { color: #ff680d; }
+.red a { color: #870000; }
 
 .glow {
     padding: 16px;
