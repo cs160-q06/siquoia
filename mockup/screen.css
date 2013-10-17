@@ -2,7 +2,7 @@ body {
     margin: 0;
     background: radial-gradient(circle 1024px at 50% 0, #fff 0%, #fff 16%, 
                                 #333 90%) repeat fixed 0% 0% transparent;
-    min-height: 100%
+    min-height: 100%;
     height: auto !important;
     height: 100%;
     font-family: "Linux_Libertine_O_C";
@@ -40,19 +40,20 @@ body {
     font-family: sans-serif;
 }
 
-.loginfield {
-    margin-top: 32px;
+.loginfield label {
     color: #4c4c4c;
     font-size: 20px;
 }
 
-.loginfield input {
+.loginfield .text {
     width: 100%;
-    height: 48px;
+    height: 32px;
     border: none;
     border-radius: 8px;
     box-shadow: #000 0 0 8px inset;
     padding: 8px;
+    margin-top: 2px;
+    margin-bottom: 32px;
     font-size: 20px; 
     transition: box-shadow ease-out 1s;
     transition: width ease-out 0.25s;
@@ -66,7 +67,6 @@ body {
 }
 
 #button {
-    margin-top: 32px;
     width: 50%;
     color: #fff;
     background-color: #004f70;
@@ -95,7 +95,7 @@ body {
 .glow {
     padding: 16px;
     text-shadow: #555 0 0 3px, #000 0 1px 1px;
-    transition: text-shadow ease-out 2s;
+    transition: text-shadow ease-out 4s;
 }
 
 .glow:hover {

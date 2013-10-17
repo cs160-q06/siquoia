@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 <title>Siquoia login mockup</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="style.css" type="text/css" media="handheld,all" />
 </head>
 
@@ -24,26 +27,21 @@
     <a href="#">Create account</a>
 </div>
 
-<form action="#" method="post">
+<form class="loginfield" action="#" method="post">
+<p>
+<label for="username">Username:</label>
+<input class="text" type="text" id="username" />
 
-<div class="loginfield">
-Username:
-<input type="text" />
-</div>
-
-<div class="loginfield">
-Password:
-<input type="text" />
-</div>
+<label for="password">Password:</label>
+<input class="text" type="text" id="password" />
 
 <input id="button" type="submit" value="Sign in" name="submit" />
+</p>
+</form>
 
 </div> <!-- END login -->
-
-</div>
 
 </div> <!-- END wallpaper -->
 </body>
 
 </html>
-
