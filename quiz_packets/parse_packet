@@ -44,9 +44,13 @@ def question_set(FILE):
             q_linenum = linenum + 1
             yield question_set
             question_set = []
-        elif line.isspace() and len(question_set) != 5:
+        elif line.isspace() and len(question_set) < 4:
+            print("\n\nWARNING: Extra whitespace found on line {}.\n\n".format(linenum),
+                  file=sys.stderr)
+            next
+        elif line.isspace() and len(question_set) > 5:
             print("\n\nERROR: the question at line {} "
-                  "does not have exactly four "
+                  "has more than four "
                   "answers.\n\n".format(q_linenum), file=sys.stderr)
             question_set = [] 
         else:
@@ -55,11 +59,18 @@ def question_set(FILE):
     # Print last question set.
     if len(question_set) == 5:
         yield question_set
+    elif line.isspace():
+        return
     else:
         exit("\n\nERROR: the last question in the input file "
              "does not have exactly four answers.\n\n")
 
+numquestions = 0
 for (q, correct_answer, answer1, answer2, answer3) in question_set(sys.stdin):
+    numquestions += 1
     print("{}\n* {}\n  {}\n  {}\n  {}".format(q, correct_answer, answer1,
                                               answer2, answer3),
           file=sys.stdout)
+
+print("{} properly formatted question and answer sets "
+      "found.".format(numquestions), file=sys.stderr)
