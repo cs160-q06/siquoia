@@ -52,4 +52,80 @@ The users.
 The distributors.
 The lawyers.
 
+What is the name of the operating system that many people incorrectly refer to as "Linux".
+GNU
+Unix
+Solaris
+OpenIndiana
 
+What is Linux?
+A kernel.
+An operating system.
+A userspace program.
+An app.
+
+Since so many people incorrectly refer to the GNU operating system as "Linux", the Free Software Foundation has made a compromise by calling the operating system _.
+GNU/Linux
+Unix/Linux
+GNU/Hurd
+GNU/BSD
+
+What is the name of the law firm in New York that provides pro bono legal services to free software developers who seek to enforce violations of copyleft violations.
+Software Freedom Law Center
+Linux Foundation
+Free Software Foundation
+SCO
+
+Who started the Free Software Movement?
+Richard Stallman
+Richard Fontana
+Linus Torvalds
+Andrew Tanenbaum
+
+What does the acronym GNU stand for?
+Gnu's Not Unix
+Great New Universe
+Good Nix Universal
+Goal Nix Universe
+
+What does the acronym LAME stand for?
+Lame Ain't an MP3 Encoder
+Linux App MP3 Encoder
+Library Audio MP3 Encoder
+Loose Audio MP3 Encoder
+
+What does the acronym EINE stand for?
+Eine Is Not Emacs
+Editor In New Elisp
+Exit Inside Net Editor
+Emacs In New Emacs
+
+Who created the kernel, Linux?
+Linus Torvalds
+Richard Stallman
+Eben Moglen
+Andrew Tanenbaum
+
+The LGPL is a license meant for which of the following?
+Software libraries
+Artwork
+Laptops
+Other licenses
+
+What year did Linus Torvalds contribute his kernel to the GNU operating system project?
+1992
+1980
+1983
+1998
+
+What year did Richard Stallman announce the GNU operating system project?
+1983
+1993
+1995
+2000
+
+Mac OS X is derived from which family of free operating systems?
+BSD
+GNU/Linux
+Android
+FirefoxOS
