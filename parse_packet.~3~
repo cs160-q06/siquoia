@@ -1,0 +1,48 @@
+#!/usr/bin/env python2
+""" This program parses, through stdin, a file containing multiple
+choice questions and answers. Each question is expected to have four
+possible answers, with the first question being the correct one. The
+input file is expected to be in the following format: each question
+and its answers are separated by a single line break, and new question
+is preceded by two line breaks.
+
+question
+correct answer
+answer
+answer
+answer
+"""
+from __future__ import division, print_function
+import sys
+
+def question_set(FILE):
+    """ This function reads a file and yields a question and its four
+    answers in a set (question, correct_answer, answer1, answer2,
+    answer3), one at a time until it reaches the end of file.
+    """
+    for line in FILE:
+        if line.isspace():
+            try:
+                # yield a question set and then reinitialize
+                # question_list
+                if len(question_set) != 5:
+                    exit("FATAL ERROR: the question\n"
+                         "    \"{}\"\n"
+                         "does not have exactly four "
+                         "answers.".format(question_set[0]))
+                yield question_set
+                question_set = []
+            except:
+                # question_list has not been initialized. This must be
+                # the first line, and it's empty. Grr...
+                print("WARNING: first line was not a question.", 
+                      file=sys.stderr)
+                question_set = []
+        else:
+            line = line.rstrip()
+            question_set.append(line)
+
+for (question, correct_answer, answer1, answer2, answer3) in question_set:
+    print("{}\n* {}\n  {}\n  {}\n  {}".format(question, correct_answer, 
+                                              answer1, answer2, answer3),
+          file=sys.stdout)
