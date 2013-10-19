@@ -82,25 +82,43 @@ Richard Fontana
 Linus Torvalds
 Andrew Tanenbaum
 
-What does the acronym GNU stand for?
+What free software project does the acronym GNU stand for?
 Gnu's Not Unix
 Great New Universe
 Good Nix Universal
 Goal Nix Universe
 
-What does the acronym LAME stand for?
+What free software project does the acronym LAME stand for?
 Lame Ain't an MP3 Encoder
 Linux App MP3 Encoder
 Library Audio MP3 Encoder
 Loose Audio MP3 Encoder
 
-What does the acronym EINE stand for?
+What free software project does the acronym EINE stand for?
 Eine Is Not Emacs
 Editor In New Elisp
 Exit Inside Net Editor
 Emacs In New Emacs
 
-Who created the kernel, Linux?
+What free software project does the acronym ZWEI stand for?
+Zwei Was Eine Initially
+Zoological Works Entering Internet
+Zippy Windows Encompassing Innovation
+Zero Whiskey Echo India
+
+What free software project does the acronym WINE stand for?
+Wine Is Not an Emulator
+Windows Is Not Excellent
+Work In Navajo Encryption
+Wash INternet Ectoplasm
+
+What free software project does the acronym PINE stand for? 
+Pine Is Nearly Elm
+Program Intended for New Email
+Possible INtestinal Element
+Programmable INternet Evolution
+
+Who created the kernel Linux?
 Linus Torvalds
 Richard Stallman
 Eben Moglen
@@ -114,18 +132,258 @@ Other licenses
 
 What year did Linus Torvalds contribute his kernel to the GNU operating system project?
 1992
-1980
-1983
-1998
+1972
+1982
+2002
 
 What year did Richard Stallman announce the GNU operating system project?
 1983
+1973
 1993
-1995
-2000
+2003
 
 Mac OS X is derived from which family of free operating systems?
 BSD
 GNU/Linux
-Android
-FirefoxOS
+PWB
+OpenSolaris
+
+Debian is derived from which family of free operating systems?
+GNU/Linux
+BSD
+OpenIndiana
+PWB
+
+Which GNU/Linux distribution is Ubuntu derived from?
+Debian
+Red Hat
+Slackware
+Gentoo
+
+What does BSD stand for?
+Berkeley Software Distribution
+Brian's Software Distribution
+Boston Software Distribution
+Bradley's Software Distribution
+
+Which of the following free software projects did NOT come from UC Berkeley?
+MariaDB/MySQL
+PostgreSQL
+The GNU Image Manipulation Program (GIMP)
+BSD
+
+Which of the following is true?
+The word "free" in "free software" refers to the the user's liberties.
+The word "free" in "free software" refers to the the $0 cost of the software.
+All of these.
+None of these.
+
+Who created the GNU operating system (commonly referred to as "Linux")?
+Richard Stallman
+Linus Torvalds
+Ken Thompson
+Dennis Ritchie
+
+Which of the following is a commercial free software company?
+Red Hat
+Debian
+Slackware
+Arch
+
+Which of the following is a commercial free software project?
+GNU Ada
+GNU GCC
+GNU Emacs
+GNU Image Manipulation Program (GIMP)
+
+Which of these licences is a copyleft license?
+GNU General Public License (GPL)
+Apache Software License
+Expat License (a.k.a. "MIT License")
+BSD License
+
+Which of these licenses is a lax, permissive non-copyleft license?
+Apache Software License
+GNU General Public License
+European Union Public License
+Mozilla Public License
+
+Which of the following is true?
+Free software can be relicensed as nonfree software as long as all copyright holders agree to the change.
+Free software can never be relicensed.
+Free software is required to cost $0.
+Free software is the same as freeware.
+
+The Creative Commons Attribution-Sharealike (CC BY-SA) license is a copyleft license intended for which of the following?
+Works of art and entertainment.
+Software.
+Documentation.
+None of these.
+
+What is the kernel most commonly used in the GNU operating system?
+Linux
+BSD
+Minix
+Hurd
+
+What is the kernel used in the Android operating system?
+Linux
+BSD
+Minix
+Hurd
+
+What is the kernel used in the Amazon Swindle (a.k.a. "Kindle")?
+Linux
+BSD
+Minix
+Hurd
+
+What is the kernel used in the Barnes & Noble Crook (a.k.a. "Nook")?
+Linux
+BSD
+Minix
+Hurd
+
+What license is the kernel Linux released under?
+GNU General Public License v2
+Mozilla Public License 2.0
+Creative Commons Attribution-Sharealike 2.0
+Apache Software License 2.0
+
+What license is the GNU Compiler Collection released under?
+GNU General Public License v3
+Mozilla Public License 2.0
+Creative Commons Attribution-Sharealike 2.0
+Apache Software License 2.0
+
+What is "Tivoization"?
+The use of hardware to restrict the user's ability to change the software.
+The recording of television shows.
+The watching of television shows.
+The skipping of commercials. 
+
+Which of the following licenses addresses the issue of "Tivoization"?
+The GNU General Public License v3
+Mozilla Public License 2.0
+Creative Commons Attribution-Sharealike 2.0
+Apache Software License 2.0
+
+What is the kernel used in Samsung televisions.
+Linux
+BSD
+Minix
+Hurd
+
+Longstanding, unreported security flaws are most common in which of the following?
+Proprietary software (e.g., Microsoft Windows and Mac OS X).
+Free software (e.g., GNU/Linux and OpenBSD).
+Typesetting software (e.g., LaTeX)
+Graphics software (e.g., GIMP)
+
+Which of the following are factors in why proprietary software tends to have more longstanding, unreported security flaws than free software?
+All of these.
+Free software allows more eyes to examine the code.
+Proprietary software projects usually prioritize money over the public good.
+Proprietary software projects have more bureaucratic issues to deal with than free software projects.
+
+What is a free software replacement for Adobe Photoshop?
+The GNU Image Manipulation Program (GIMP)
+Microsoft Paint
+iPaint
+iPhoto
+
+What is a free software replacement for Adobe Illustrator?
+Inkscape
+CorelDRAW
+Microsoft Expression Design
+iDraw
+
+What is a free software replacement for Microsoft Office?
+All of these.
+LibreOffice
+OpenOffice
+Calligra
+
+What is a free software replacement for Maya?
+Blender
+Kdenlive
+Cinelerra
+OpenShot
+
+What is a free software replacement for Final Cut Pro and Adobe Premier?
+Kdenlive
+Audacity
+VLC
+Gnash
+
+What is a free software replacement for Adobe After Effects?
+Blender
+Gnash
+GIMP
+GNOME
+
+What is a free software replacement for Mac OS X?
+GNU/Linux
+Windows
+Solaris
+HP-UX
+
+What is a free software replacement for Microsoft Windows?
+GNU/Linux
+Mac OS X
+Solaris
+AIX
+
+What is a free software replacement for Oracle Database?
+MariaDB (a.k.a. MySQL)
+IBM DB2
+Microsoft SQL Server
+MaxDB
+
+Which of these is a free software replacement for Microsoft Outlook?
+All of these.
+Thunderbird
+Evolution
+KMail
+
+Which of these is a free software replacement for the AOL Instant Messenger, Windows Live Messenger, and Yahoo! Messenger, all in one?
+All of these.
+Pidgin
+Adium
+Empathy
+
+Which of these is a free software replacement for Skype?
+All of these.
+Ekiga
+Jitsi
+Empathy
+
+Which of these is a fully free software replacement for Android?
+Replicant
+Cyanogenmod
+Windows Mobile
+iOS
+
+Which of these is a free software replacement for Windows Media Player?
+All of these.
+VLC
+Totem
+Mplayer
+
+Which of these is a free software replacement for QuickTime?
+All of these.
+VLC
+Totem
+Mplayer
+
+Which of these are free software graphical desktop management programs?
+All of these.
+GNOME
+KDE
+LXDE
+
+Who is the president (a.k.a. "Chief GNUisance" of the Free Software Foundation?
+Richard Stallman
+Bradley Kuhn
+Karen Sandler
+Donald Knuth

@@ -44,10 +44,11 @@ def question_set(FILE):
             q_linenum = linenum + 1
             yield question_set
             question_set = []
-        elif line.isspace() and len(question_set) < 4:
-            print("\nWARNING: Extra whitespace found on line {}.\n\n".format(linenum),
-                  file=sys.stderr)
-            next
+        elif line.isspace() and len(question_set) < 5:
+            print("\nERROR: the question at line {} "
+                  "hs fewer than four "
+                  "answers.\n\n".format(q_linenum), file=sys.stderr)
+            question_set = []
         elif line.isspace() and len(question_set) > 5:
             print("\nERROR: the question at line {} "
                   "has more than four "
