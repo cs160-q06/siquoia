@@ -471,3 +471,9 @@ Karsten Gerloff
 Richard Stallman
 Nagarjuna G.
 Federico Heinz
+
+In 2008, what did Don Ho (the developer of notepad++) do to offend the Chinese government?
+He posted a banner on the notepad++ project home page that said "Boycott Beijing 2008".
+He sent a donation to Ai Weiwei.
+He talked about freedom of speech.
+He talked about China's human rights violations.
