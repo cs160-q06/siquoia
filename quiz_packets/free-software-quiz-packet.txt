@@ -382,8 +382,74 @@ GNOME
 KDE
 LXDE
 
-Who is the president (a.k.a. "Chief GNUisance" of the Free Software Foundation?
+Who is the president (a.k.a. "Chief GNUisance") of the Free Software Foundation?
 Richard Stallman
 Bradley Kuhn
 Karen Sandler
 Donald Knuth
+
+Which of these is a free software replacement for Adobe InDesign?
+Scribus
+Pidgin
+GNU Icecat
+Nautilus
+
+What is the mascot of the GNU project?
+A gnu.
+A rabbit.
+An elephant.
+A penguin.
+
+What is the mascot of the Linux project?
+A penguin.
+A pidgeon.
+A python.
+A sparrow.
+
+As of 2013, Which of these free software projects has adopted version 3 of the GNU GPL?
+Samba
+CUPS
+Linux
+Pidgin
+
+Which license is unwelcome in Apple's App Store?
+GNU General Public License (GPL)
+Apache Software License
+Mozilla Public License
+Expat License (a.k.a. MIT License)
+
+For which project was Apple sued over noncompliance with the GNU General Public License in 2010?
+VLC
+Firefox
+PHP
+Python
+
+Which hardware vendor was sued in 2008 for failure to adhere to the requirements of GNU's General Public License in its Linux-based Linksys products.
+Cisco
+Juniper
+Ericson
+Lucent
+
+Most math and science textbooks published since the 1980s are typeset with which free software document preparation system?
+LaTeX
+LibreOffice
+OpenOffice
+Calligra
+
+What are "binary blobs"?
+Nonfree (binary) device drivers included with the Linux kernel.
+Random sequences of zeroes and ones.
+Overweight cats that observe only two states: sleep and eat.
+Semisolid foods that are eaten with chopsticks.
+
+Which branch of the Free Software Foundation (FSF) maintains a fork of the kernel Linux that has all of the binary blobs removed?
+Free Software Foundation Latin American branch (FSFLA).
+Free Software Foundation France (FSF France)
+Free Software Foundation Europe  (FSF Europe)
+Free Software Foundation India (FSF India)
+
+In what city is the main branch of the Free Software Foundation (FSF) located?
+Boston, Massachusetts, USA
+Paris, France
+Berlin, Germany
+Kerala, India
