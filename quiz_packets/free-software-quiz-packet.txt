@@ -452,4 +452,22 @@ In what city is the main branch of the Free Software Foundation (FSF) located?
 Boston, Massachusetts, USA
 Paris, France
 Berlin, Germany
-Kerala, India
+Thiruvananthapuram, Kerala, India
+
+As of 2013, who is the Chairman of the India branch of the Free Software Foundation (FSF)?
+Nagarjuna G.
+Richard Stallman
+Loïc Dachary
+Federico Heinz
+
+As of 2013, who is the President of the France branch of the Free Software Foundation (FSF)? 
+Loïc Dachary
+Richard Stallman
+Karsten Gerloff
+Federico Heinz
+
+As of 2013, who is the President of the Europe branch of the Free Software Foundation?
+Karsten Gerloff
+Richard Stallman
+Nagarjuna G.
+Federico Heinz
