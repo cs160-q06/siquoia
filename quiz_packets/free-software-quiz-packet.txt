@@ -483,3 +483,9 @@ Linux
 Minix
 Unix
 BSD
+
+What is the Free Software Foundation's stance on software patents?
+They should be abolished.
+They are good for suing other companies.
+They are good for helping lawyers make money on litigation.
+They are good because they help patent trolls make money.
