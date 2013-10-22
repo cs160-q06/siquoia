@@ -477,3 +477,27 @@ He posted a banner on the notepad++ project home page that said "Boycott Beijing
 He sent a donation to Ai Weiwei.
 He talked about freedom of speech.
 He talked about China's human rights violations.
+
+Although it is only the name of a kernel, people often refer to the GNU operating system as which of the following?
+Linux
+Minix
+Unix
+BSD
+
+What is the Free Software Foundation's stance on software patents?
+They should be abolished.
+They are good for suing other companies.
+They are good for helping lawyers make money on litigation.
+They are good because they help patent trolls make money.
+
+What is DRM?
+Digital Restrictions Management
+Dogmatic Restrictions Manager
+Draconian Restrictions Movement
+Dilbert Restricted by Managers
+
+Why were none of the Microsoft Word doc* formats accepted as the ISO standard format for word processing?
+Because the doc* formats are secret, proprietary formats that keep users in the dark about how they work. 
+Because the doc* formats are poorly designed.
+Because Microsoft declined the ISO committee's offer to make it into the international standard.
+Because nobody in the ISO committee had a copy of Microsoft Office.
