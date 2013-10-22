@@ -477,3 +477,9 @@ He posted a banner on the notepad++ project home page that said "Boycott Beijing
 He sent a donation to Ai Weiwei.
 He talked about freedom of speech.
 He talked about China's human rights violations.
+
+Although it is only the name of a kernel, people often refer to the GNU operating system as which of the following?
+Linux
+Minix
+Unix
+BSD
