@@ -531,3 +531,15 @@ Because the doc* formats are secret, proprietary formats that keep users in the 
 Because the doc* formats are poorly designed.
 Because Microsoft declined the ISO committee's offer to make it into the international standard.
 Because nobody in the ISO committee had a copy of Microsoft Office.
+
+What does Apple do to exercise control over computer users?
+All of these.
+Use Digital Restrictions Management (DRM).
+Spy on users.
+Use patent aggression against free software projects.
+
+Which of the following does NOT illustrate the meaning of the word "free" in the term "free software"?
+When a person wins a raffle and gets a $2000 proprietary software license from Microsoft, that person got free software. 
+Someone who has been released from jail has been freed from the restraints of the cell walls.
+Someone who has been handcuffed is freed from his shackles when the handcuffs are unlocked.
+When people are allowed to speak about anything, including controversial or offenfive topics -- even topics that have the potential to cause anger or hurt feelings or stir up hatred -- then people have freedom of speach.
