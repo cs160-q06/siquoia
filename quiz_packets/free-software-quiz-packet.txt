@@ -477,3 +477,33 @@ He posted a banner on the notepad++ project home page that said "Boycott Beijing
 He sent a donation to Ai Weiwei.
 He talked about freedom of speech.
 He talked about China's human rights violations.
+
+Until 2010, notepad++ was hosted on the SourceForge project hosting site. Although each of the following answers is true, what is the main reason that project leader Don Ho stopped using SourceForge as his primary point of distribution?
+The US made the SourceForge web site block access to some countries, which went against Don Ho's strong devotion to the principles of free software.
+SourceForge lacks a proper revisioning system.
+SourceForge itself is nonfree software.
+SourceForge is a centralized service that has too much control over project.
+
+What is a major problem with using GitHub?
+GitHub has centralized control of software projects. The GitHub web interface to its git servers is nonfree, so users can not fork GitHub and run their own GitHub web site if their are dissatisfied with GitHub.
+GitHub is for Windows only.
+GitHub is for Mac OS X only.
+GitHub is for GNU/Linux only.
+
+Who is the current (as of 2013) Director-Counsel and Chairman of the Software Freedom Law Center in New York?
+Columbia Law Professor Eben Moglen.
+Yale Law Professor George W. Bush.
+UCLA Law Professor Barack Obama.
+Brown Law Professor Ronald Reagan.
+
+Which free software project aims to replace centralized media hosting services like YouTube, Flickr, SoundCloud, and Thingiverse?
+Mediagoblin
+GNU Social
+Diaspora
+GNU Telephony
+
+Which free software project, involving the creator of the World Wide Web, Tim Berners-Lee, is working to replace dangerous centralized social networking services like Facebook and Google+?
+GNU Social
+Mediagoblin
+GNU Telephony
+Diaspora
