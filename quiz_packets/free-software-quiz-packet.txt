@@ -574,44 +574,68 @@ zip
 7zip
 gzip
 
-Of the following four GNU/Linux distributions is from France? 
+Of the following four GNU/Linux distributions, which one is from France? 
 Mageia
 Ubuntu
 Mint
 Arch
 
-Of the following four GNU/Linux distributions is from Isle of Man? 
+Of the following four GNU/Linux distributions, which one is from Isle of Man? 
 Ubuntu
 Trisquel
 Mageia
 Gentoo
 
-Of the following four GNU/Linux distributions is from Indiana?
+Of the following four GNU/Linux distributions, which one is from Indiana?
 Debian
 Ubuntu
 Gentoo
 Mageia
 
-Of the following four GNU/Linux distributions is from India, and funded by the Indian government for use by the state?
+Of the following four GNU/Linux distributions, which one is from India, and funded by the Indian government for use by the state?
 BOSS
 Debian
 Gentoo
 Mageia
 
-Of the following four GNU/Linux distributions is from China, and funded by the Chinese government for use by the state?
+Of the following four GNU/Linux distributions, which one is from China and is funded by the Chinese government for use by the state?
 Red Flag
 Red Hat
 Gentoo
 Arch
 
-Of the following four GNU/Linux distributions is from Spain?
+Of the following four GNU/Linux distributions, which one is from Spain?
 Trisquel
 Mageia
 Manjaro
 Debian
 
-Of the following four GNU/Linux distributions is made and distributed by the US Department of Defense and the US Air Force?
+Of the following four GNU/Linux distributions, which one is made and distributed by the US Department of Defense and the US Air Force?
 Lightweight Portable Security
 Slackware
 Debian
 Gentoo
+
+Of the following four GNU/Linux distributions, which one is from North Carolina?
+Fedora
+Debian
+Gentoo
+Arch
+
+What is the name of a sister organization of the Free Software Foundation, located in San Francisco, that is known for fighting civil rights violations?
+Electronic Frontier Foundation (EFF)
+Software Freedom Law Center (SFLC)
+Software Freedom Conservancy
+Yorba
+
+Of the following four GNU/Linux distributions, which one is from Canada?
+Arch
+Parabola
+Gentoo
+Fedora
+
+Of the following four GNU/Linux distributions, which one is from the United Kingdom?
+Parabola
+Fedora
+Red Hat
+Mageia
