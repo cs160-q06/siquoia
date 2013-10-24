@@ -543,3 +543,33 @@ When a person wins a raffle and gets a $2000 proprietary software license from M
 Someone who has been released from jail has been freed from the restraints of the cell walls.
 Someone who has been handcuffed is freed from his shackles when the handcuffs are unlocked.
 When people are allowed to speak about anything, including controversial or offenfive topics -- even topics that have the potential to cause anger or hurt feelings or stir up hatred -- then people have freedom of speach.
+
+Who is allowed to sell copies of free software?
+All of these.
+Users.
+Developers.
+Corporations.
+
+What is the limit for how much you can charge when you sell copies free software?
+There is no limit.
+$10,000
+$100,000
+$1,000,000
+
+Why does free software tend to also be gratis?
+Because people like to share, so the free market drives the price down to zero.
+Because free software licenses mandate it.
+Because it is against the law to charge a fee.
+Because the software is worthless.
+
+Which of the following chat clients is free software?
+Pidgin
+Yahoo! Instant Messenger
+AOL Instant Messenger
+MSN Instant Messenger
+
+Which of the following compression formats is nonfree?
+rar
+zip
+7zip
+gzip
