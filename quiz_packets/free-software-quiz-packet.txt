@@ -615,3 +615,15 @@ Lightweight Portable Security
 Slackware
 Debian
 Gentoo
+
+Which one of the following does the FSF license and compliance lab NOT do?
+Assign licenses to free software projects.
+Produce educational materials.
+Investigate reported license violations involving code whose copyright has been entrusted to the FSF.
+Certify products that use and require only free software.
+
+What was the first hardware product certified by the FSF as "Respects Your Freedom"?
+The Lulzbot 3D printer
+A WiFi adapter
+A laptop
+A printer
