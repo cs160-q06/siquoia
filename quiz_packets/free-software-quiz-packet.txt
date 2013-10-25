@@ -639,3 +639,21 @@ Parabola
 Fedora
 Red Hat
 Mageia
+
+In 2013, Canonical teamed up with the Chinese Ministry of Industry and Information Technology to create which of these GNU/Linux distributions for China?
+Ubuntu Kylin
+Red Flag
+Red Hat
+Kubuntu
+
+What is the name of the customized GNU/Linux distribution made by and for the French national law enforcement agency Gendarmerie Nationale?
+GendBuntu
+Ubuntu Kylin
+Goobuntu
+Lubuntu
+
+What is the name of the customized GNU/Linux distribution used internally by the employees of Google?
+Goobuntu
+GendBuntu
+Ubuntu Kylin
+Xubuntu
