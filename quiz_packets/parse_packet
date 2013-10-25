@@ -74,4 +74,4 @@ for (q, correct_answer, answer1, answer2, answer3) in question_set(sys.stdin):
           file=sys.stdout)
 
 print("\n{} properly formatted question and answer sets "
-      "found.\n\n".format(numquestions), file=sys.stderr)
+      "parsed.\n\n".format(numquestions), file=sys.stderr)
