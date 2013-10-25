@@ -628,7 +628,7 @@ The Lulzbot 3D printer
 A WiFi adapter
 A laptop
 A printer
-=======
+
 Of the following four GNU/Linux distributions, which one is from North Carolina?
 Fedora
 Debian
@@ -670,4 +670,3 @@ Goobuntu
 GendBuntu
 Ubuntu Kylin
 Xubuntu
->>>>>>> 63b4051d1517a9d7b4d046750b2c6351f8abd152
