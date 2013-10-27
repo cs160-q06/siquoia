@@ -252,6 +252,7 @@ public class Controller {
     }
 
     private static void startQuiz(List<Question> questionList, Scanner scLine) {
+        int correct = 0;
         int count = 0;
         Quiz quiz = new Quiz(questionList);
         while (quiz.hasNext()) {
@@ -281,18 +282,23 @@ public class Controller {
 
                     break;
                 } else {
-                    System.out.println("WRONG INPUT!");
+                    System.out.println("INVALID INPUT!");
                 }
             }
 
             if (quiz.isCurrentCorrect(answer)) {
                 System.out.println("Your answer for #" + count + " is correct!\n");
-            } else {
+                correct++;
+            }
+            else {
                 System.out.println("Your answer for #" + count + " is incorrect!\n");
+            }
 
-                count = (count > 0 ? count - 1 : count);
-                System.out.println("You correctly answer total " + count
-                        + (count < 2 ? "question" : "questions"));
+            if (!quiz.hasNext())
+            {
+                //count = (count > 0 ? count - 1 : count);
+                System.out.println("You correctly answered a total of " + correct /*count*/
+                        + (correct /*count*/ < 2 ? " question" : " questions"));
                 break;
             }
 
