@@ -670,3 +670,27 @@ Goobuntu
 GendBuntu
 Ubuntu Kylin
 Xubuntu
+
+Which of the following does NOT describe FreedomBox?
+A box that doesn't cost any money.
+A personal, plug-in server that runs free software.
+A device designed to create and preserve personal privacy.
+A secure platform upon which federated social networks can be constructed.
+
+Which of the following corporations do NOT use any free software?
+None of these.
+Microsoft.
+Apple.
+Oracle.
+
+The NSA, which is an organization that uses GNU/Linux internally, developed which of the following?
+SELinux
+TOR
+AppArmor
+OTR
+
+Which of the following was originally developed by the U.S. Navy to protect government communications?
+TOR (The Onion Router)
+OTR (Off The Record)
+SELinux (Security Enhanced Linux)
+AppArmor
