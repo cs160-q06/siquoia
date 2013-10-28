@@ -694,3 +694,9 @@ TOR (The Onion Router)
 OTR (Off The Record)
 SELinux (Security Enhanced Linux)
 AppArmor
+
+In the Human Genome Project, what was the operating system used by Jonathan Kent to construct the human genome, using a PC clustering method developed at NASA?
+GNU/Linux
+BSD
+Windows
+Solaris
