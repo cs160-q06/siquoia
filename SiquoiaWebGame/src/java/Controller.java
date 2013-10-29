@@ -1,4 +1,3 @@
-
 import DataOOD.Node;
 import DataOOD.Question;
 import DataOOD.Quiz;
@@ -15,10 +14,12 @@ import java.util.Scanner;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author mr.nam
  */
+
 public class Controller {
 
     private static Node root;
@@ -27,13 +28,15 @@ public class Controller {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        //test2();
-//        test3("dataset1.txt");
+        // test2();
+        // test3("dataset1.txt");
         test();
 
     }
 
-    private static int addTopic(Node<Topic> currentNode, Node<Topic> previousNode, String line, int count) {
+    private static int addTopic(Node<Topic> currentNode, 
+                                Node<Topic> previousNode, 
+                                String line, int count) {
         Node root = previousNode;
         Scanner sc = new Scanner(line);
         sc.useDelimiter(">");
@@ -85,9 +88,10 @@ public class Controller {
             if (isTopic) {
                 currentNode = root;
                 previousNode = root;
-                countTopic = addTopic(currentNode, previousNode, line, countTopic);
+                countTopic = addTopic(currentNode, previousNode, line, 
+                                      countTopic);
                 isTopic = false;
-                //System.out.println(currentNode.toString());
+                // System.out.println(currentNode.toString());
             } else if (line.isEmpty()) {
                 if (scLine.hasNextLine()) {
                     line = scLine.nextLine();
@@ -101,7 +105,9 @@ public class Controller {
                         String a2 = scLine.nextLine().trim();
                         String a3 = scLine.nextLine().trim();
                         Node<Topic> node = root.getChildByID(countTopic);
-                        Question question = new Question(countQuestion, node.getData(), q, c, a1, a2, a3, 0);
+                        Question question = new Question(countQuestion, 
+                                                         node.getData(), 
+                                                         q, c, a1, a2, a3, 0);
                         questionList.add(question);
                     }
                 }
@@ -196,28 +202,36 @@ public class Controller {
         String s = "";
         if (t.equals("main")) {
             s += "---Menu---\n";
-            s += EnumString.LOGIN.getValue() + " (" + EnumString.LOGIN_C.getValue() + ")\n";
-            s += EnumString.TUTORIAL.getValue() + " (" + EnumString.TUTORIAL_C.getValue() + ")\n";
-            s += EnumString.OPTION.getValue() + " (" + EnumString.OPTION_C.getValue() + ")\n";
-            s += EnumString.EXIT.getValue() + " (" + EnumString.EXIT_C.getValue() + ")\n";
+            s += EnumString.LOGIN.getValue() + " (" 
+                 + EnumString.LOGIN_C.getValue() + ")\n";
+            s += EnumString.TUTORIAL.getValue() + " (" 
+                 + EnumString.TUTORIAL_C.getValue() + ")\n";
+            s += EnumString.OPTION.getValue() + " (" 
+                 + EnumString.OPTION_C.getValue() + ")\n";
+            s += EnumString.EXIT.getValue() + " (" 
+                 + EnumString.EXIT_C.getValue() + ")\n";
 
         } else if (t.equals(EnumString.LOGIN_C.getValue())) {
             s += "---Menu > " + EnumString.LOGIN.getValue() + "---\n";
-            s += EnumString.BACK.getValue() + " (" + EnumString.BACK_C.getValue() + ")\n";
+            s += EnumString.BACK.getValue() + " (" 
+                 + EnumString.BACK_C.getValue() + ")\n";
 
             menuLevel = EnumString.LOGIN;
 
         } else if (t.equals(EnumString.TUTORIAL_C.getValue())) {
             s += "---Menu > " + EnumString.TUTORIAL.getValue() + "---\n";
-            s += EnumString.START.getValue() + " (" + EnumString.START_C.getValue() + ")\n";
+            s += EnumString.START.getValue() + " (" 
+                 + EnumString.START_C.getValue() + ")\n";
 
-            s += EnumString.BACK.getValue() + " (" + EnumString.BACK_C.getValue() + ")\n";
+            s += EnumString.BACK.getValue() + " (" 
+                 + EnumString.BACK_C.getValue() + ")\n";
 
             menuLevel = EnumString.TUTORIAL;
 
         } else if (t.equals(EnumString.OPTION_C.getValue())) {
             s += "---Menu > " + EnumString.OPTION.getValue() + "---\n";
-            s += EnumString.BACK.getValue() + " (" + EnumString.BACK_C.getValue() + ")\n";
+            s += EnumString.BACK.getValue() + " (" 
+                 + EnumString.BACK_C.getValue() + ")\n";
 
             menuLevel = EnumString.OPTION;
         } else { // wrong input, print the menu again
@@ -287,18 +301,22 @@ public class Controller {
             }
 
             if (quiz.isCurrentCorrect(answer)) {
-                System.out.println("Your answer for #" + count + " is correct!\n");
+                System.out.println("Your answer for #" + count 
+                                   + " is correct!\n");
                 correct++;
             }
             else {
-                System.out.println("Your answer for #" + count + " is incorrect!\n");
+                System.out.println("Your answer for #" + count 
+                                   + " is incorrect!\n");
             }
 
             if (!quiz.hasNext())
             {
                 //count = (count > 0 ? count - 1 : count);
-                System.out.println("You correctly answered a total of " + correct /*count*/
-                        + (correct /*count*/ < 2 ? " question" : " questions"));
+                System.out.println("You correctly answered a total of " 
+                                   + correct /*count*/
+                                   + (correct /*count*/ 
+                                   < 2 ? " question" : " questions"));
                 break;
             }
 
@@ -307,10 +325,14 @@ public class Controller {
 
     private static void printQuestion(Question question, int count) {
         String s = "Question #" + count + ": ";
-        s += question.getQuestion() + "\n\t(" + EnumString.A.getValue() + ") " + question.getCorrectAnswer()
-                + "\n\t(" + EnumString.B.getValue() + ") " + question.getAnswer1()
-                + "\n\t(" + EnumString.C.getValue() + ") " + question.getAnswer2()
-                + "\n\t(" + EnumString.D.getValue() + ") " + question.getAnswer3();
+        s += question.getQuestion() + "\n\t(" + EnumString.A.getValue() + ") " 
+             + question.getCorrectAnswer()
+             + "\n\t(" + EnumString.B.getValue() + ") " 
+             + question.getAnswer1()
+             + "\n\t(" + EnumString.C.getValue() + ") " 
+             + question.getAnswer2()
+             + "\n\t(" + EnumString.D.getValue() + ") " 
+             + question.getAnswer3();
         System.out.println(s + "\n");
     }
 }
