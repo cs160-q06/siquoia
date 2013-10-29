@@ -616,7 +616,6 @@ Slackware
 Debian
 Gentoo
 
-<<<<<<< HEAD
 Which one of the following does the FSF license and compliance lab NOT do?
 Assign licenses to free software projects.
 Produce educational materials.
