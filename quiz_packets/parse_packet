@@ -91,21 +91,46 @@ def question_set(FILE):
              "does not have exactly four answers.\n\n")
 
 numquestions = 0
+topics_processed = False
 for (q, correct_answer, answer1, answer2, answer3), topic_triplet \
         in question_set(sys.stdin):
     numquestions += 1
 
-    topic = topic_triplet['topic']
-    subtopic = topic_triplet['subtopic']
-    subsubtopic = topic_triplet['subsubtopic']
+    if not topics_processed:
+        topic = MySQLdb.escape_string(topic_triplet['topic'])
+        subtopic = MySQLdb.escape_string(topic_triplet['subtopic'])
+        subsubtopic = MySQLdb.escape_string(topic_triplet['subsubtopic'])
 
-    c.execute("""SELECT id FROM topics WHERE topic='{}'""".format(topic))
-    topic_id = c.fetchone()[0]
-    c.execute("""SELECT id FROM subtopics WHERE subtopic='{}'""".format(subtopic))
-    subtopic_id = c.fetchone()[0]
-    c.execute("""SELECT id FROM subsubtopics 
-              WHERE subsubtopic='{}'""".format(subsubtopic))
-    subsubtopic_id = c.fetchone()[0]
+        # insert new topic into database if it doesn't exist
+        query = "INSERT INTO topics (topic) VALUES ('{}')" \
+                " ON DUPLICATE KEY UPDATE id=id".format(topic)
+        c.execute(query)
+        c.execute("SELECT id FROM topics WHERE topic='{}'".format(topic))
+        topic_id = c.fetchone()[0]
+
+
+        # insert new subtopic into database if it doesn't exist
+        query = "INSERT IGNORE INTO subtopics(subtopic, topic_id)" \
+                " SELECT '{}', id FROM topics WHERE topic='{}'" \
+                " ON DUPLICATE KEY" \
+                " UPDATE topic_id=topic_id".format(subtopic, topic)
+        c.execute(query)
+        c.execute("SELECT id FROM subtopics " \
+                  " WHERE subtopic='{}'".format(subtopic))
+        subtopic_id = c.fetchone()[0]
+
+        # insert new subsubtopic into database if it doesn't exist
+        query = "INSERT INTO subsubtopics(subsubtopic, subtopic_id)" \
+                " SELECT '{}', id FROM subtopics WHERE subtopic='{}'" \
+                " ON DUPLICATE KEY" \
+                " UPDATE subtopic_id=subtopic_id".format(subsubtopic, subtopic)
+        c.execute(query)
+        c.execute("SELECT id FROM subsubtopics " \
+                  " WHERE subsubtopic='{}'".format(subsubtopic))
+        subsubtopic_id = c.fetchone()[0]
+
+        topics_processed = True
+
 
     query = "INSERT INTO questions (topic_id, question, correct_answer, " \
             "                       answer1, answer2, answer3) " \
@@ -116,6 +141,7 @@ for (q, correct_answer, answer1, answer2, answer3), topic_triplet \
                         MySQLdb.escape_string(answer2),
                         MySQLdb.escape_string(answer3))
     c.execute(query)
+
 
 print("\n{} properly formatted question and answer sets "
       "parsed.\n\n".format(numquestions), file=sys.stderr)
