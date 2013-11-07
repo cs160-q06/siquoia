@@ -110,20 +110,21 @@ for (q, correct_answer, answer1, answer2, answer3), topic_triplet \
 
 
         # insert new subtopic into database if it doesn't exist
-        query = "INSERT INTO subtopics(subtopic, topic_id)" \
-                " SELECT '{}', id FROM topics WHERE topic='{}'" \
+        query = "INSERT INTO subtopics (subtopic, topic_id)" \
+                " VALUES ('{}', {})" \
                 " ON DUPLICATE KEY" \
-                " UPDATE topic_id=topic_id".format(subtopic, topic)
+                " UPDATE topic_id=topic_id".format(subtopic, topic_id)
         c.execute(query)
         c.execute("SELECT id FROM subtopics " \
                   " WHERE subtopic='{}'".format(subtopic))
         subtopic_id = c.fetchone()[0]
 
         # insert new subsubtopic into database if it doesn't exist
-        query = "INSERT INTO subsubtopics(subsubtopic, subtopic_id)" \
-                " SELECT '{}', id FROM subtopics WHERE subtopic='{}'" \
+        query = "INSERT INTO subsubtopics (subsubtopic, subtopic_id)" \
+                " VALUES ('{}', {})" \
                 " ON DUPLICATE KEY" \
-                " UPDATE subtopic_id=subtopic_id".format(subsubtopic, subtopic)
+                " UPDATE subtopic_id=subtopic_id".format(subsubtopic, 
+                                                         subtopic_id)
         c.execute(query)
         c.execute("SELECT id FROM subsubtopics " \
                   " WHERE subsubtopic='{}'".format(subsubtopic))
