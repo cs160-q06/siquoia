@@ -27,6 +27,7 @@ import MySQLdb
 
 try:
     db = MySQLdb.connect('localhost', 'siquoia', 'siquoia', 'siquoia')
+    db.autocommit(True)
     c = db.cursor()
     c.execute("SELECT VERSION();")
     version = c.fetchone()[0]
@@ -114,7 +115,6 @@ for (q, correct_answer, answer1, answer2, answer3), topic_triplet \
                         MySQLdb.escape_string(answer1),
                         MySQLdb.escape_string(answer2),
                         MySQLdb.escape_string(answer3))
-    print("{}".format(query))
     c.execute(query)
 
 print("\n{} properly formatted question and answer sets "
