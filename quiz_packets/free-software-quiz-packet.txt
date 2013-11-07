@@ -1,3 +1,6 @@
+# politics
+## liberty
+### free software
 Which of the following is a property of free software?
 It allows users to sell the software to others at any price they choose.
 It doesn't cost the user any money.
