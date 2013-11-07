@@ -13,10 +13,10 @@ body {
     background-image: url(carbon-texture-alpha.png);
     margin: 0 auto;
     min-width: 480px;
-    min-height: 100%
-    height: auto !important;
     height: 100%;
     width: 100%;
+    height: auto !important; 
+    min-height: 100%
 }
 
 #logo {

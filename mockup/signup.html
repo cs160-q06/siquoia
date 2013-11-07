@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+<title>Siquoia login mockup</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="style.css" type="text/css" media="handheld,all" />
+<style>
+#registration {
+    width: 320px;
+    margin: 48px auto;
+    font-family: sans-serif;
+}
+
+.registrationfield label {
+    color: #4c4c4c;
+    font-size: 20px;
+}
+
+.registrationfield .text {
+    width: 100%;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: #000 0 0 8px inset;
+    padding: 8px;
+    margin-top: 2px;
+    margin-bottom: 32px;
+    font-size: 20px;
+    transition: box-shadow ease-out 1s;
+    transition: width ease-out 0.25s;
+}
+
+.registrationfield input:focus {
+    width: 110%;
+    box-shadow: #004f70 0 0 10px inset;
+    transition: box-shadow ease-out 1s;
+    transition: width ease-out 0.25s;
+}
+
+}
+</style>
+</head>
+
+<body>
+<div id="wallpaper">
+
+<div id="logo">
+<a style="text-decoration:none;" href="./">
+<span class="green glow">S</span>
+<span class="blue glow">i</span>
+<span class="red glow">q</span>
+<span class="orange glow">u</span>
+<span class="red glow">o</span>
+<span class="blue glow">i</span>
+<span class="green glow">a</span>
+</a>
+</div> <!-- END logo -->
+
+<div id="registration">
+<span style="font-family:Linux_Libertine_O_C; font-size:33px;">
+<span class="green">R</span>
+<span class="blue">e</span>
+<span class="red">g</span>
+<span class="orange">i</span>
+<span class="red">s</span>
+<span class="blue">t</span>
+<span class="green">r</span>
+<span class="blue">a</span>
+<span class="red">t</span>
+<span class="orange">i</span>
+<span class="red">o</span>
+<span class="blue">n</span>
+</span>
+<form class="registrationfield" action="register.php" method="post">
+<p>
+<label for="username">Username:</label>
+<input class="text" type="text" id="username" name="user" />
+
+<label for="password">Password:</label>
+<input class="text" type="password" id="password" name="pass" />
+
+<input id="button" type="submit" value="Sign up" name="submit" />
+</p>
+</form>
+</div>
+
+</div> <!-- END wallpaper -->
+</body>
+
+</html>
