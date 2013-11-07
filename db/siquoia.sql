@@ -9,6 +9,7 @@ CREATE TABLE users(
 CREATE TABLE topics(
     id INT NOT NULL AUTO_INCREMENT,
     topic VARCHAR(128) NOT NULL,
+    UNIQUE(topic),
     PRIMARY KEY (id)
 );
 
@@ -16,23 +17,27 @@ CREATE TABLE subtopics(
     id INT NOT NULL AUTO_INCREMENT,
     subtopic VARCHAR(128) NOT NULL,
     topic_id INT,
-    CONSTRAINT FOREIGN KEY (topic_id) REFERENCES topics (id)
-        ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (id, topic_id)
+    FOREIGN KEY (topic_id) REFERENCES topics (id)
+         ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE(subtopic),
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE subsubtopics(
     id INT NOT NULL AUTO_INCREMENT,
     subsubtopic VARCHAR(128) NOT NULL,
     subtopic_id INT,
-    CONSTRAINT FOREIGN KEY (subtopic_id) REFERENCES subtopics (id)
-        ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (id, subtopic_id)
+    FOREIGN KEY (subtopic_id) REFERENCES subtopics (id)
+         ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE(subsubtopic),
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE questions(
     question_id INT NOT NULL AUTO_INCREMENT,
     topic_id INT,
+    subtopic_id INT,
+    subsubtopic_id INT,
     question VARCHAR(1024),
     correct_answer VARCHAR(1024),
     answer1 VARCHAR(1024),
@@ -41,6 +46,10 @@ CREATE TABLE questions(
     num_times_answered_correctly INT,
     num_attempts INT,
     CONSTRAINT FOREIGN KEY (topic_id) REFERENCES topics (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (subtopic_id) REFERENCES subtopics (id)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FOREIGN KEY (subsubtopic_id) REFERENCES subsubtopics (id)
         ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (question_id)
 );
