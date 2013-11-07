@@ -23,6 +23,17 @@ the line number of the improperly formatted question set.
 """
 from __future__ import division, print_function
 import sys
+import MySQLdb
+
+try:
+    db = MySQLdb.connect('localhost', 'siquoia', 'siquoia', 'siquoia')
+    c = db.cursor()
+    c.execute("SELECT VERSION();")
+    version = c.fetchone()[0]
+    print("Database version: {}".format(version), file=sys.stderr)
+except:
+    print("Doh!", file=sys.stderr)
+    sys.exit(1)
 
 def question_set(FILE):
     """ This function reads a file and yields a question and its four
@@ -40,15 +51,25 @@ def question_set(FILE):
     q_linenum = 0             # line number before the most recently
                               # parsed question
 
+    topic_triplet = {}        # dictionary of topic, subtopic,
+                              # and subsubtopic
+
+    topic = {'#':'topic', '##':'subtopic', '###':'subsubtopic'}
+
     for line in FILE:
         linenum += 1
-        if line.isspace() and len(question_set) == 5:
+
+        if line[0] == '#':
+            # process topic/subtopic/subsubtopic
+            temp = line.split(' ', 1)
+            topic_triplet[topic[temp[0]]] = temp[1].rstrip()
+        elif line.isspace() and len(question_set) == 5:
             q_linenum = linenum + 1
-            yield question_set
+            yield question_set, topic_triplet
             question_set = []
         elif line.isspace() and len(question_set) < 5:
             print("\nERROR: the question at line {} "
-                  "hs fewer than four "
+                  "has fewer than four "
                   "answers.\n\n".format(q_linenum), file=sys.stderr)
             question_set = []
         elif line.isspace() and len(question_set) > 5:
@@ -61,7 +82,7 @@ def question_set(FILE):
 
     # Print last question set.
     if len(question_set) == 5:
-        yield question_set
+        yield question_set, topic_triplet
     elif line.isspace():
         return
     else:
@@ -69,11 +90,32 @@ def question_set(FILE):
              "does not have exactly four answers.\n\n")
 
 numquestions = 0
-for (q, correct_answer, answer1, answer2, answer3) in question_set(sys.stdin):
+for (q, correct_answer, answer1, answer2, answer3), topic_triplet \
+        in question_set(sys.stdin):
     numquestions += 1
-    print("{}\n* {}\n  {}\n  {}\n  {}".format(q, correct_answer, answer1,
-                                              answer2, answer3),
-          file=sys.stdout)
+
+    topic = topic_triplet['topic']
+    subtopic = topic_triplet['subtopic']
+    subsubtopic = topic_triplet['subsubtopic']
+
+    c.execute("""SELECT id FROM topics WHERE topic='{}'""".format(topic))
+    topic_id = c.fetchone()[0]
+    c.execute("""SELECT id FROM subtopics WHERE subtopic='{}'""".format(subtopic))
+    subtopic_id = c.fetchone()[0]
+    c.execute("""SELECT id FROM subsubtopics 
+              WHERE subsubtopic='{}'""".format(subsubtopic))
+    subsubtopic_id = c.fetchone()[0]
+
+    query = "INSERT INTO questions (topic_id, question, correct_answer, " \
+            "                       answer1, answer2, answer3) " \
+            "VALUES ({}, '{}', '{}', '{}', '{}', '{}')".format(subsubtopic_id,
+                        MySQLdb.escape_string(q),
+                        MySQLdb.escape_string(correct_answer),
+                        MySQLdb.escape_string(answer1),
+                        MySQLdb.escape_string(answer2),
+                        MySQLdb.escape_string(answer3))
+    print("{}".format(query))
+    c.execute(query)
 
 print("\n{} properly formatted question and answer sets "
       "parsed.\n\n".format(numquestions), file=sys.stderr)
