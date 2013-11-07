@@ -110,7 +110,7 @@ for (q, correct_answer, answer1, answer2, answer3), topic_triplet \
 
 
         # insert new subtopic into database if it doesn't exist
-        query = "INSERT IGNORE INTO subtopics(subtopic, topic_id)" \
+        query = "INSERT INTO subtopics(subtopic, topic_id)" \
                 " SELECT '{}', id FROM topics WHERE topic='{}'" \
                 " ON DUPLICATE KEY" \
                 " UPDATE topic_id=topic_id".format(subtopic, topic)
