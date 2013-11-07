@@ -36,24 +36,21 @@ except:
     print("Doh!", file=sys.stderr)
     sys.exit(1)
 
-def question_set(FILE):
+def question_set(FILE, topic_table):
     """ This function reads a file and yields a question and its four
     answers in a set (question, correct_answer, answer1, answer2,
     answer3), one at a time until it reaches the end of file.
     """
-    question_set = []         # question_set contains a question and
-                              # its four answers in the order
-                              # (question, correct_answer, answer1,
-                              # answer2, answer3)
+    q_set = []         # q_set contains a question and
+                       # its four answers in the order
+                       # (question, correct_answer, answer1,
+                       # answer2, answer3)
 
-    linenum = 0               # linenum keeps track the line number
-                              # of the line currently being parsed.
+    linenum = 0        # linenum keeps track the line number
+                       # of the line currently being parsed.
 
-    q_linenum = 0             # line number before the most recently
-                              # parsed question
-
-    topic_triplet = {}        # dictionary of topic, subtopic,
-                              # and subsubtopic
+    q_linenum = 0      # line number before the most recently
+                       # parsed question
 
     topic = {'#':'topic', '##':'subtopic', '###':'subsubtopic'}
 
@@ -63,27 +60,27 @@ def question_set(FILE):
         if line[0] == '#':
             # process topic/subtopic/subsubtopic
             temp = line.split(' ', 1)
-            topic_triplet[topic[temp[0]]] = temp[1].rstrip()
-        elif line.isspace() and len(question_set) == 5:
+            topic_table[topic[temp[0]]] = temp[1].rstrip()
+        elif line.isspace() and len(q_set) == 5:
             q_linenum = linenum + 1
-            yield question_set, topic_triplet
-            question_set = []
-        elif line.isspace() and len(question_set) < 5:
+            yield q_set
+            q_set = []
+        elif line.isspace() and len(q_set) < 5:
             print("\nERROR: the question at line {} "
                   "has fewer than four "
                   "answers.\n\n".format(q_linenum), file=sys.stderr)
-            question_set = []
-        elif line.isspace() and len(question_set) > 5:
+            q_set = []
+        elif line.isspace() and len(q_set) > 5:
             print("\nERROR: the question at line {} "
                   "has more than four "
                   "answers.\n\n".format(q_linenum), file=sys.stderr)
-            question_set = [] 
+            q_set = [] 
         else:
-            question_set.append(line.rstrip())
+            q_set.append(line.rstrip())
 
-    # Print last question set.
-    if len(question_set) == 5:
-        yield question_set, topic_triplet
+    # parse last question set.
+    if len(q_set) == 5:
+        yield q_set
     elif line.isspace():
         return
     else:
@@ -91,51 +88,61 @@ def question_set(FILE):
              "does not have exactly four answers.\n\n")
 
 numquestions = 0
-topics_processed = False
-for (q, correct_answer, answer1, answer2, answer3), topic_triplet \
-        in question_set(sys.stdin):
+topic_table = {}
+need_to_parse_topics = True
+for (q, correct_answer, answer1, answer2, answer3) \
+        in question_set(sys.stdin, topic_table):
     numquestions += 1
 
-    if not topics_processed:
-        topic = MySQLdb.escape_string(topic_triplet['topic'])
-        subtopic = MySQLdb.escape_string(topic_triplet['subtopic'])
-        subsubtopic = MySQLdb.escape_string(topic_triplet['subsubtopic'])
+    if need_to_parse_topics:
+        try:
+            topic = MySQLdb.escape_string(topic_table['topic'])
+            # insert new topic into database if it doesn't exist
+            query = "INSERT INTO topics (topic) VALUES ('{}')" \
+                    " ON DUPLICATE KEY UPDATE id=id".format(topic)
+            c.execute(query)
+            c.execute("SELECT id FROM topics WHERE topic='{}'".format(topic))
+            topic_id = c.fetchone()[0]
+        except:
+            topic_id = "NULL"
+            print("WARNING: no topic found.", file=sys.stderr)
+        try:
+            subtopic = MySQLdb.escape_string(topic_table['subtopic'])
+            # insert new subtopic into database if it doesn't exist
+            query = "INSERT INTO subtopics (subtopic, topic_id)" \
+                    " VALUES ('{}', {})" \
+                    " ON DUPLICATE KEY" \
+                    " UPDATE topic_id=topic_id".format(subtopic, topic_id)
+            c.execute(query)
+            c.execute("SELECT id FROM subtopics " \
+                      " WHERE subtopic='{}'".format(subtopic))
+            subtopic_id = c.fetchone()[0]
+        except:
+            subtopic_id = "NULL"
+            print("WARNING: no subtopic found.", file=sys.stderr)
+        try:
+            subsubtopic = MySQLdb.escape_string(topic_table['subsubtopic'])
+            # insert new subsubtopic into database if it doesn't exist
+            query = "INSERT INTO subsubtopics (subsubtopic, subtopic_id)" \
+                    " VALUES ('{}', {})" \
+                    " ON DUPLICATE KEY" \
+                    " UPDATE subtopic_id=subtopic_id".format(subsubtopic, 
+                                                             subtopic_id)
+            c.execute(query)
+            c.execute("SELECT id FROM subsubtopics " \
+                      " WHERE subsubtopic='{}'".format(subsubtopic))
+            subsubtopic_id = c.fetchone()[0]
+        except:
+            subsubtopic_id = "NULL"
+            print("WARNING: no subsubtopic found.", file=sys.stderr)
 
-        # insert new topic into database if it doesn't exist
-        query = "INSERT INTO topics (topic) VALUES ('{}')" \
-                " ON DUPLICATE KEY UPDATE id=id".format(topic)
-        c.execute(query)
-        c.execute("SELECT id FROM topics WHERE topic='{}'".format(topic))
-        topic_id = c.fetchone()[0]
+        need_to_parse_topics = False
 
-
-        # insert new subtopic into database if it doesn't exist
-        query = "INSERT INTO subtopics (subtopic, topic_id)" \
-                " VALUES ('{}', {})" \
-                " ON DUPLICATE KEY" \
-                " UPDATE topic_id=topic_id".format(subtopic, topic_id)
-        c.execute(query)
-        c.execute("SELECT id FROM subtopics " \
-                  " WHERE subtopic='{}'".format(subtopic))
-        subtopic_id = c.fetchone()[0]
-
-        # insert new subsubtopic into database if it doesn't exist
-        query = "INSERT INTO subsubtopics (subsubtopic, subtopic_id)" \
-                " VALUES ('{}', {})" \
-                " ON DUPLICATE KEY" \
-                " UPDATE subtopic_id=subtopic_id".format(subsubtopic, 
-                                                         subtopic_id)
-        c.execute(query)
-        c.execute("SELECT id FROM subsubtopics " \
-                  " WHERE subsubtopic='{}'".format(subsubtopic))
-        subsubtopic_id = c.fetchone()[0]
-
-        topics_processed = True
-
-
-    query = "INSERT INTO questions (topic_id, question, correct_answer, " \
-            "                       answer1, answer2, answer3) " \
-            "VALUES ({}, '{}', '{}', '{}', '{}', '{}')".format(subsubtopic_id,
+    query = "INSERT INTO questions (topic_id, subtopic_id, subsubtopic_id," \
+            "                       question, correct_answer," \
+            "                       answer1, answer2, answer3)" \
+            "VALUES ({}, {}, {}, '{}', '{}', '{}', '{}', '{}')".format( \
+                        topic_id, subtopic_id, subsubtopic_id,
                         MySQLdb.escape_string(q),
                         MySQLdb.escape_string(correct_answer),
                         MySQLdb.escape_string(answer1),
