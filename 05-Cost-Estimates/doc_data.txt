@@ -1,0 +1,12 @@
+InfoKey: Creator
+InfoValue: Calc
+InfoKey: Producer
+InfoValue: LibreOffice 4.1
+InfoKey: CreationDate
+InfoValue: D:20131120203239-08'00'
+PdfID0: 3912bc983ebe45ef82d45c4870bdbc80
+PdfID1: 3912bc983ebe45ef82d45c4870bdbc80
+NumberOfPages: 4
+BookmarkTitle: Sheet1
+BookmarkLevel: 1
+BookmarkPageNumber: 1

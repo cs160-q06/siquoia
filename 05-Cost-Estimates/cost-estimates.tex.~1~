@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\bibliographystyle{IEEEtran}
+\usepackage{fancyhdr,parskip}
+\setlength{\parskip}{.5cm plus4mm minus3mm}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks]{hyperref}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    citecolor=black,
+    linkcolor=darkblue
+}
+\usepackage[nonumberlist]{glossaries}
+\renewcommand{\glossarysection}[2][]{}
+\makeglossaries
+\usepackage{makeidx}
+\makeindex
+\makeatletter
+  \renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}
+\makeatother
+%\def\thesection {\Alph{section}}
+%\def\thesubsection {\alph{subsection}}
+%\def\thesubsubsection {\arabic{subsubsection}}
+\usepackage{titlesec}
+\titlespacing{\subsection}{2em}{0pt}{0pt}
+
+\pagestyle{fancy}
+\fancyhead[c]{SiQuoia cost estimates (Team Q06)}
+\fancyfoot[RO]{\copy SQ06 \year}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+\title{CS160 - SiQuoia Cost Estimates \\ {\normalsize Version 2}}
+
+%\author{ Ryan Alcoran \and Joe Lee \and Shivalik Narad \and Nam Phan
+%  \and Swapna Vemparala \and Amber Wong }
+\author{{\Large Team Q06}}
+
+\begin{titlepage}
+\maketitle
+
+{\bf Project Team}
+\begin{center}
+\begin{tabular}{p{4cm} l}
+{\bf Names}         & {\bf Roles} \\[.5em]
+Joe Lee             & Business Manager \\[1em]
+Swapna Vemparala    & Project Manager \\[1em]
+Shivalik Narad      & Development Manager 1 \\[1em]
+Nam Phan            & Development Manager 2 \\[1em]
+Amber Wong          & Risk Manager \\[1em]
+Ryan Alcoran        & Test Manager
+\end{tabular}
+\end{center}
+
+{\bf Project Team}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+{\bf Date}      & {\bf Reasons for change}  & {\bf Version} \\
+\hline
+09/14/2013      & Initial creation          & v1 \\
+\hline
+11/20/2013      & Update cost estimates.    & v2 \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{titlepage}
+
+\section{Introduction}
+\subsection{Purpose}
+The cost estimation document contains detailed estimates of the costs incurred for implementing SiQuoia based on the requirements specified by the client. It is intended for all stakeholders of the SiQuoia system.
+
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
