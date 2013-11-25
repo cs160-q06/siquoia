@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\bibliographystyle{IEEEtran}
+\usepackage{parskip}
+\setlength{\parskip}{.5cm plus4mm minus3mm}
+\usepackage[margin=1in]{geometry}
+\usepackage{glossaries}
+\usepackage{nomencl}
+\makeglossary
+\renewcommand{\nomname}{Glossary}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    citecolor=black
+}
+\usepackage{makeidx}
+\makeindex
+\makeatletter
+  \renewcommand\@seccntformat[1]{\csname the#1\endcsname.\quad}
+\makeatother
+\def\thesection {\Alph{section}}
+\def\thesubsection {\alph{subsection}}
+\def\thesubsubsection {\arabic{subsubsection}}
+\usepackage{titlesec}
+\titlespacing{\subsection}{2em}{}{}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+\title{SIQuoIA Proposal\\Group 6}
+
+\author{
+    \IEEEauthorblockN{Ryan Alcoran}
+    \and
+    \IEEEauthorblockN{Joe Lee}
+    \and
+    \IEEEauthorblockN{Shivalik Narad}
+    \and
+    \IEEEauthorblockN{Nam Phan}
+    \and
+    \IEEEauthorblockN{Swapna Vemparala}
+    \and
+    \IEEEauthorblockN{Amber Wong}
+}
+
+\maketitle
+\IEEEpeerreviewmaketitle
+
+% Glossary items here.
+\nomenclature{term}{definition}
+
+
+\section{Preface}
+This is a proposal for the Simple Intelligence Quotient Increasing Application.
+
+\section{Introduction}
+
+\section{Glossary}
+\printglossary
+
+\section{User requirements definition}
+Blah, blah, blah. Here's an item \index{item} for the index.
+
+\section{System architecture}
+\hfill To be submitted in v2 of the proposal.
+
+\section{System requirements specification}
+
+\section{System models}
+\hfill To be submitted in v2 of the proposal.
+
+\section{System evolution}
+
+\section{Appendices}
+
+\subsection{Hardware requirements}
+
+\printindex
+
+
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
