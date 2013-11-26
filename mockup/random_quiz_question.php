@@ -62,7 +62,7 @@ $answer3 = $row['answer3'];
     <?php echo $answer3; ?></p>
 </div>
 <center>
-<input id="button" type="submit" value="Submit" name="submit" 
+<input id="button" type="submit" value="Next" name="submit" 
        style="width:256px; margin:16px 0;"/>
 </center>
 </form>
