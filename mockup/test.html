@@ -3,15 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 
 <head>
-<title>Siquoia login mockup</title>
+<title>Siquoia home screen mockup</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="style.css" type="text/css" media="handheld,all" />
-<META HTTP-EQUIV=Refresh CONTENT="2; URL=home.html">
 <style>
-#message {
-    margin-top: 16px;
-    text-align: center;
-    font-size: 32px;
+#sink {
+    position: relative;
+    margin: 0 auto;
+    width: 640px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: #000 0 0 4px inset;
+    transition: all .25s ease-in;
+}
+#sink:hover {
+    background-color: #FEFEFE;
+    box-shadow: #000 0 0 8px inset;
+    transition: all .25s ease-out;
 }
 </style>
 </head>
@@ -20,7 +29,6 @@
 <div id="wallpaper">
 
 <div id="logo">
-<a style="text-decoration:none;" href="./">
 <span class="green glow">S</span>
 <span class="blue glow">i</span>
 <span class="red glow">q</span>
@@ -28,11 +36,9 @@
 <span class="red glow">o</span>
 <span class="blue glow">i</span>
 <span class="green glow">a</span>
-</a>
 </div> <!-- END logo -->
 
-<div id="message">
-Congratulations! You're loggged in!
+<div id="sink">
 </div>
 
 </div> <!-- END wallpaper -->

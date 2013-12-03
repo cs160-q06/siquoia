@@ -29,6 +29,22 @@ $answer3 = $row['answer3'];
     text-indent:-24px;
     margin-left:24px;
 }
+#quiz_box {
+    font-size:18px;
+    text-align:left;
+    width:512px;
+    margin:0 auto;
+    padding:16px;
+    border-radius:8px;
+    background-color: #FEFEFE;
+    box-shadow: #000 0 0 8px inset;
+    transition: all .25s ease-in;
+}
+#quiz_box:hover {
+    background-color:#fff;
+    box-shadow: #000 0 0 4px inset;
+    transition: all .25s ease-out;
+}
 </style>
 </head>
 
@@ -48,9 +64,7 @@ $answer3 = $row['answer3'];
 </div> <!-- END logo -->
 
 <form action="random_quiz_question.php">
-<div style="font-size:18px; text-align:left; width:512px; margin:0 auto;
-            box-shadow:#000 0 0 16px inset; padding:16px;
-            border-radius:8px; background-color:#fff;">
+<div id="quiz_box">
 <p><?php echo $question; ?></p>
 <p class="answer"><input type="radio" name="answer"/>
     <?php echo "$correct_answer"; ?></p>
