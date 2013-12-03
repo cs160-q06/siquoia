@@ -7,6 +7,22 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="style.css" type="text/css" media="handheld,all" />
 <style>
+body {
+    background: radial-gradient(circle 1024px at 50% 0, #fff 0%, #fff 16%,
+                                green 90%) repeat fixed 0% 0% transparent;
+}
+#registration{
+    animation: colorchange 1s infinite linear;
+}
+    @keyframes colorchange {
+        0% { text-shadow: #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px; }
+        50% { text-shadow: #fff 0 0 8px, #fff 0 0 6px, #fff 0 0 4px,
+                           #fff 0 0 4px, #fff 0 0 4px, #fff 0 0 4px; }
+        100% { text-shadow: #fff 0 0 2px, #fff 0 0 2px, #fff 0 0 2px; }
+
+    }
+
+
 #registration {
     width: 320px;
     margin: 48px auto;
@@ -39,7 +55,6 @@
     transition: width ease-out 0.25s;
 }
 
-}
 </style>
 </head>
 
