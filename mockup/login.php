@@ -5,7 +5,7 @@ $user = isset($_POST['user']) ? stripslashes($_POST['user']) : '';
 $pass = isset($_POST['pass']) ? stripslashes($_POST['pass']) : '';
 
 $query = "SELECT email FROM users WHERE email='$user'"
-         . " AND password='$pass'";
+         . " AND password=SHA1('$pass')";
 echo "<br/>$query<br/>";
 $result = $db_handle->query($query);
 $num_rows = mysqli_num_rows($result);

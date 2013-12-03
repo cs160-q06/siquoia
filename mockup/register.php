@@ -12,7 +12,8 @@ if(mysqli_num_rows($result)) {
     header('Location: login_taken.html');
 }
 else {
-    $query = "INSERT INTO users (email, password) VALUES ('$user', '$pass')";
+    $query = "INSERT INTO users (email, password)"
+             . " VALUES ('$user', SHA1('$pass'))";
     if (mysqli_query($db_handle, $query))
         header('Location: registration_success.html');
     else
